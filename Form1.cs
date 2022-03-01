@@ -10,11 +10,37 @@ using System.Windows.Forms;
 
 namespace MedicalSoftware
 {
-    public partial class Form1 : Form
+    public partial class formLogin : Form
     {
-        public Form1()
+        public formLogin()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (txtId.Text == "" && txtPin.Text == "")
+            {
+                MessageBox.Show("Please enter ID and Pin");
+            }
+            else if (txtId.Text == "")
+            {
+                MessageBox.Show("Please enter ID");
+            }
+            else
+            {
+                MessageBox.Show("Please enter PIN");
+            }
         }
     }
 }
