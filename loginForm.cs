@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace MedicalSoftware
 {
@@ -29,6 +31,7 @@ namespace MedicalSoftware
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            //if no data in the text box
             if (txtId.Text == "" && txtPin.Text == "")
             {
                 MessageBox.Show("Please enter ID and Pin");
@@ -37,10 +40,28 @@ namespace MedicalSoftware
             {
                 MessageBox.Show("Please enter ID");
             }
-            else
+            else if (txtId.Text == "")
             {
                 MessageBox.Show("Please enter PIN");
             }
+            else
+            {
+                home homefrm = new home();
+                homefrm.Show();
+
+            }
+
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void formLogin_Load(object sender, EventArgs e)
+        {
+            //cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\source\repos\490\MedicalSoftware\medDB.mdf;Integrated Security=True");
+            //cn.Open();
         }
     }
 }
