@@ -63,5 +63,15 @@ namespace MedicalSoftware
             //cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\source\repos\490\MedicalSoftware\medDB.mdf;Integrated Security=True");
             //cn.Open();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
