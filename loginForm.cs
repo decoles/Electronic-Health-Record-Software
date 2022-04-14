@@ -71,7 +71,9 @@ namespace MedicalSoftware
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
+            Register regsterFrm = new Register();
+            regsterFrm.Show();
+            //this.Close();
         }
     }
 }

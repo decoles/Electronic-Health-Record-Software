@@ -21,5 +21,12 @@ namespace MedicalSoftware
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            formLogin formLogin = new formLogin();
+            Register register;
+            this.Close();
+        }
     }
 }

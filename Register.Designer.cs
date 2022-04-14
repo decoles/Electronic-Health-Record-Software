@@ -40,20 +40,19 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(137, 773);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(6);
+            this.btnReturn.Location = new System.Drawing.Point(68, 402);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(236, 75);
+            this.btnReturn.Size = new System.Drawing.Size(118, 39);
             this.btnReturn.TabIndex = 16;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(137, 686);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(6);
+            this.btnExit.Location = new System.Drawing.Point(68, 357);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(236, 75);
+            this.btnExit.Size = new System.Drawing.Size(118, 39);
             this.btnExit.TabIndex = 15;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -61,10 +60,9 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(137, 599);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSubmit.Location = new System.Drawing.Point(68, 311);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(236, 75);
+            this.btnSubmit.Size = new System.Drawing.Size(118, 39);
             this.btnSubmit.TabIndex = 14;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -73,38 +71,34 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(83, 453);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(42, 236);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 36);
+            this.label3.Size = new System.Drawing.Size(64, 17);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Pin";
+            this.label3.Text = "Password";
             // 
             // txtPin
             // 
-            this.txtPin.Location = new System.Drawing.Point(55, 491);
-            this.txtPin.Margin = new System.Windows.Forms.Padding(6);
+            this.txtPin.Location = new System.Drawing.Point(28, 255);
             this.txtPin.Name = "txtPin";
-            this.txtPin.Size = new System.Drawing.Size(428, 31);
+            this.txtPin.Size = new System.Drawing.Size(216, 20);
             this.txtPin.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(83, 268);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(42, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 36);
+            this.label2.Size = new System.Drawing.Size(43, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "Name";
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(55, 307);
-            this.txtId.Margin = new System.Windows.Forms.Padding(6);
+            this.txtId.Location = new System.Drawing.Point(28, 160);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(428, 31);
+            this.txtId.Size = new System.Drawing.Size(216, 20);
             this.txtId.TabIndex = 10;
             // 
             // lblRegister
@@ -112,18 +106,17 @@
             this.lblRegister.AutoSize = true;
             this.lblRegister.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegister.ForeColor = System.Drawing.Color.Black;
-            this.lblRegister.Location = new System.Drawing.Point(128, 92);
-            this.lblRegister.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblRegister.Location = new System.Drawing.Point(64, 48);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(210, 54);
+            this.lblRegister.Size = new System.Drawing.Size(105, 27);
             this.lblRegister.TabIndex = 9;
             this.lblRegister.Text = "Register";
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 971);
+            this.ClientSize = new System.Drawing.Size(269, 505);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSubmit);
@@ -132,6 +125,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblRegister);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Register";
             this.Text = "Register";
             this.ResumeLayout(false);
