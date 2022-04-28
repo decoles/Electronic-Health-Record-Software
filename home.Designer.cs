@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnSchedule = new FontAwesome.Sharp.IconButton();
+            this.btnPatient = new FontAwesome.Sharp.IconButton();
             this.btnChart = new FontAwesome.Sharp.IconButton();
             this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTopMenu = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnPatient = new FontAwesome.Sharp.IconButton();
-            this.btnSchedule = new FontAwesome.Sharp.IconButton();
             this.panelSideMenu.SuspendLayout();
             this.panelTopMenu.SuspendLayout();
             this.panelDesktop.SuspendLayout();
@@ -46,7 +46,7 @@
             // 
             // panelSideMenu
             // 
-            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.panelSideMenu.Controls.Add(this.btnSchedule);
             this.panelSideMenu.Controls.Add(this.btnPatient);
             this.panelSideMenu.Controls.Add(this.btnChart);
@@ -59,6 +59,46 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(100, 1021);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // btnSchedule
+            // 
+            this.btnSchedule.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSchedule.FlatAppearance.BorderSize = 0;
+            this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSchedule.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnSchedule.IconChar = FontAwesome.Sharp.IconChar.Calendar;
+            this.btnSchedule.IconColor = System.Drawing.Color.Black;
+            this.btnSchedule.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSchedule.IconSize = 30;
+            this.btnSchedule.Location = new System.Drawing.Point(0, 184);
+            this.btnSchedule.Name = "btnSchedule";
+            this.btnSchedule.Size = new System.Drawing.Size(100, 44);
+            this.btnSchedule.TabIndex = 8;
+            this.btnSchedule.Text = "Calender";
+            this.btnSchedule.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSchedule.UseVisualStyleBackColor = true;
+            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
+            // 
+            // btnPatient
+            // 
+            this.btnPatient.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPatient.FlatAppearance.BorderSize = 0;
+            this.btnPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPatient.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnPatient.IconChar = FontAwesome.Sharp.IconChar.Paypal;
+            this.btnPatient.IconColor = System.Drawing.Color.Black;
+            this.btnPatient.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPatient.IconSize = 30;
+            this.btnPatient.Location = new System.Drawing.Point(0, 140);
+            this.btnPatient.Name = "btnPatient";
+            this.btnPatient.Size = new System.Drawing.Size(100, 44);
+            this.btnPatient.TabIndex = 7;
+            this.btnPatient.Text = "Patient";
+            this.btnPatient.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPatient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPatient.UseVisualStyleBackColor = true;
+            this.btnPatient.Click += new System.EventHandler(this.btnPatient_Click);
             // 
             // btnChart
             // 
@@ -123,7 +163,7 @@
             // 
             // panelLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.DimGray;
+            this.panelLogo.BackColor = System.Drawing.Color.White;
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
@@ -133,7 +173,7 @@
             // 
             // panelTopMenu
             // 
-            this.panelTopMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelTopMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.panelTopMenu.Controls.Add(this.label1);
             this.panelTopMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopMenu.Location = new System.Drawing.Point(100, 0);
@@ -141,6 +181,16 @@
             this.panelTopMenu.Name = "panelTopMenu";
             this.panelTopMenu.Size = new System.Drawing.Size(1784, 52);
             this.panelTopMenu.TabIndex = 1;
+            this.panelTopMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTopMenu_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1292, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(208, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CURRENT LOGGED IN STAFF MEMBER";
             // 
             // panelDesktop
             // 
@@ -154,7 +204,7 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.BackColor = System.Drawing.SystemColors.GrayText;
+            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(0, 0);
             this.panelChildForm.Name = "panelChildForm";
@@ -162,55 +212,6 @@
             this.panelChildForm.Size = new System.Drawing.Size(1784, 969);
             this.panelChildForm.TabIndex = 0;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1550, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CURRENT LOGGED IN STAFF MEMBER";
-            // 
-            // btnPatient
-            // 
-            this.btnPatient.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPatient.FlatAppearance.BorderSize = 0;
-            this.btnPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPatient.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnPatient.IconChar = FontAwesome.Sharp.IconChar.Paypal;
-            this.btnPatient.IconColor = System.Drawing.Color.Black;
-            this.btnPatient.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPatient.IconSize = 30;
-            this.btnPatient.Location = new System.Drawing.Point(0, 140);
-            this.btnPatient.Name = "btnPatient";
-            this.btnPatient.Size = new System.Drawing.Size(100, 44);
-            this.btnPatient.TabIndex = 7;
-            this.btnPatient.Text = "Patient";
-            this.btnPatient.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPatient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPatient.UseVisualStyleBackColor = true;
-            this.btnPatient.Click += new System.EventHandler(this.btnPatient_Click);
-            // 
-            // btnSchedule
-            // 
-            this.btnSchedule.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSchedule.FlatAppearance.BorderSize = 0;
-            this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSchedule.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnSchedule.IconChar = FontAwesome.Sharp.IconChar.Calendar;
-            this.btnSchedule.IconColor = System.Drawing.Color.Black;
-            this.btnSchedule.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSchedule.IconSize = 30;
-            this.btnSchedule.Location = new System.Drawing.Point(0, 184);
-            this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Size = new System.Drawing.Size(100, 44);
-            this.btnSchedule.TabIndex = 8;
-            this.btnSchedule.Text = "Calender";
-            this.btnSchedule.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnSchedule.UseVisualStyleBackColor = true;
-            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
             // 
             // home
             // 
@@ -220,6 +221,7 @@
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTopMenu);
             this.Controls.Add(this.panelSideMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "home";
             this.Text = "home";
             this.Load += new System.EventHandler(this.home_Load);

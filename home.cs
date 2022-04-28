@@ -17,7 +17,6 @@ namespace MedicalSoftware
         {
             InitializeComponent();
 
-
         }
 
         private void home_Load(object sender, EventArgs e)
@@ -31,6 +30,7 @@ namespace MedicalSoftware
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
             this.Close();
+            new formLogin().Show();
         }
 
         private Form activeForm = null;
@@ -72,5 +72,16 @@ namespace MedicalSoftware
         {
             openChildForm(new schedule());
         }
+
+        private void panelMaster_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelTopMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }

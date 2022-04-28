@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblSchedle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblSchedle = new System.Windows.Forms.Label();
             this.panelSchedule = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btntest = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.panelSchedule.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -55,17 +55,6 @@
             this.panel1.Size = new System.Drawing.Size(1684, 100);
             this.panel1.TabIndex = 0;
             // 
-            // lblSchedle
-            // 
-            this.lblSchedle.AutoSize = true;
-            this.lblSchedle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSchedle.ForeColor = System.Drawing.Color.White;
-            this.lblSchedle.Location = new System.Drawing.Point(12, 9);
-            this.lblSchedle.Name = "lblSchedle";
-            this.lblSchedle.Size = new System.Drawing.Size(318, 55);
-            this.lblSchedle.TabIndex = 1;
-            this.lblSchedle.Text = "Appointments";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -76,6 +65,17 @@
             this.label1.Size = new System.Drawing.Size(217, 33);
             this.label1.TabIndex = 2;
             this.label1.Text = "# Appointments";
+            // 
+            // lblSchedle
+            // 
+            this.lblSchedle.AutoSize = true;
+            this.lblSchedle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSchedle.ForeColor = System.Drawing.Color.White;
+            this.lblSchedle.Location = new System.Drawing.Point(12, 9);
+            this.lblSchedle.Name = "lblSchedle";
+            this.lblSchedle.Size = new System.Drawing.Size(318, 55);
+            this.lblSchedle.TabIndex = 1;
+            this.lblSchedle.Text = "Appointments";
             // 
             // panelSchedule
             // 
@@ -111,24 +111,6 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1676, 831);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(160, 98);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1253, 551);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // btntest
             // 
             this.btntest.Location = new System.Drawing.Point(335, 31);
@@ -138,6 +120,24 @@
             this.btntest.Text = "button1";
             this.btntest.UseVisualStyleBackColor = true;
             this.btntest.Click += new System.EventHandler(this.btntest_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(160, 98);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1253, 551);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1676, 831);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // schedule
             // 
