@@ -32,7 +32,7 @@ namespace MedicalSoftware
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             //if no data in the text box
-            if (txtId.Text == "" && txtPin.Text == "")
+            if (txtId.Text == "") //&& txtpwd.Text == ""
             {
                 MessageBox.Show("Please enter ID and Pin");
             }
@@ -48,7 +48,7 @@ namespace MedicalSoftware
             {
                 home homefrm = new home();
                 homefrm.Show();
-
+                this.Hide();
             }
 
         }
@@ -60,20 +60,37 @@ namespace MedicalSoftware
 
         private void formLogin_Load(object sender, EventArgs e)
         {
-            //cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\source\repos\490\MedicalSoftware\medDB.mdf;Integrated Security=True");
-            //cn.Open();
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Register regsterFrm = new Register();
-            regsterFrm.Show();
-            //this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void lblRegister_Click(object sender, EventArgs e)
+        {
+            new Register().Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
