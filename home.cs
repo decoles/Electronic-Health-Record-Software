@@ -21,11 +21,9 @@ namespace MedicalSoftware
 
         private void home_Load(object sender, EventArgs e)
         {
-
+            //Starts dashboard from scratch
+            openChildForm(new dashboard());
         }
-
-
-        
 
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
@@ -83,5 +81,9 @@ namespace MedicalSoftware
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

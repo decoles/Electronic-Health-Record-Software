@@ -23,7 +23,7 @@ namespace MedicalSoftware
         private void schedule_Load(object sender, EventArgs e)
         {
             SQLiteConnection conn = new SQLiteConnection(ConnectionString);
-            string query = "SELECT * from Staff";
+            string query = "SELECT * from Appointments";
             SQLiteCommand cmd = new SQLiteCommand(query, conn);
             DataTable dt = new DataTable();
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
@@ -35,6 +35,16 @@ namespace MedicalSoftware
         private void btntest_Click(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
 
         }
     }

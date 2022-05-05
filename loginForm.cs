@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 
 namespace MedicalSoftware
@@ -18,6 +19,8 @@ namespace MedicalSoftware
         {
             InitializeComponent();
         }
+        SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\primaryDB.db");
+        SQLiteCommand cmd = new SQLiteCommand();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -46,6 +49,9 @@ namespace MedicalSoftware
             }
             else
             {
+                //ON LOGIN GET LAST NAME AND USERNAME AS THAT WILL BE UNIQUE
+                Global.globalUsername = txtId.Text;
+                MessageBox.Show(Global.globalUsername);
                 home homefrm = new home();
                 homefrm.Show();
                 this.Hide();

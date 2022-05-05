@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnBilling = new FontAwesome.Sharp.IconButton();
             this.panelSideMenu.SuspendLayout();
             this.panelTopMenu.SuspendLayout();
             this.panelDesktop.SuspendLayout();
@@ -46,7 +47,8 @@
             // 
             // panelSideMenu
             // 
-            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
+            this.panelSideMenu.Controls.Add(this.btnBilling);
             this.panelSideMenu.Controls.Add(this.btnSchedule);
             this.panelSideMenu.Controls.Add(this.btnPatient);
             this.panelSideMenu.Controls.Add(this.btnChart);
@@ -63,16 +65,19 @@
             // btnSchedule
             // 
             this.btnSchedule.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSchedule.FlatAppearance.BorderSize = 0;
+            this.btnSchedule.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
+            this.btnSchedule.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSchedule.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnSchedule.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.btnSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
             this.btnSchedule.IconChar = FontAwesome.Sharp.IconChar.Calendar;
-            this.btnSchedule.IconColor = System.Drawing.Color.Black;
+            this.btnSchedule.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
             this.btnSchedule.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSchedule.IconSize = 30;
-            this.btnSchedule.Location = new System.Drawing.Point(0, 184);
+            this.btnSchedule.Location = new System.Drawing.Point(0, 226);
             this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Size = new System.Drawing.Size(100, 44);
+            this.btnSchedule.Size = new System.Drawing.Size(100, 58);
             this.btnSchedule.TabIndex = 8;
             this.btnSchedule.Text = "Calender";
             this.btnSchedule.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -83,16 +88,18 @@
             // btnPatient
             // 
             this.btnPatient.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPatient.FlatAppearance.BorderSize = 0;
+            this.btnPatient.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
             this.btnPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPatient.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnPatient.IconChar = FontAwesome.Sharp.IconChar.Paypal;
-            this.btnPatient.IconColor = System.Drawing.Color.Black;
+            this.btnPatient.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.btnPatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
+            this.btnPatient.IconChar = FontAwesome.Sharp.IconChar.Male;
+            this.btnPatient.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
             this.btnPatient.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPatient.IconSize = 30;
-            this.btnPatient.Location = new System.Drawing.Point(0, 140);
+            this.btnPatient.Location = new System.Drawing.Point(0, 168);
             this.btnPatient.Name = "btnPatient";
-            this.btnPatient.Size = new System.Drawing.Size(100, 44);
+            this.btnPatient.Size = new System.Drawing.Size(100, 58);
             this.btnPatient.TabIndex = 7;
             this.btnPatient.Text = "Patient";
             this.btnPatient.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -103,16 +110,18 @@
             // btnChart
             // 
             this.btnChart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnChart.FlatAppearance.BorderSize = 0;
+            this.btnChart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
             this.btnChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChart.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnChart.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.btnChart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
             this.btnChart.IconChar = FontAwesome.Sharp.IconChar.ChartArea;
-            this.btnChart.IconColor = System.Drawing.Color.Black;
+            this.btnChart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
             this.btnChart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnChart.IconSize = 30;
-            this.btnChart.Location = new System.Drawing.Point(0, 96);
+            this.btnChart.Location = new System.Drawing.Point(0, 110);
             this.btnChart.Name = "btnChart";
-            this.btnChart.Size = new System.Drawing.Size(100, 44);
+            this.btnChart.Size = new System.Drawing.Size(100, 58);
             this.btnChart.TabIndex = 6;
             this.btnChart.Text = "Charts";
             this.btnChart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -126,13 +135,14 @@
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
             this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.Lock;
             this.btnLogout.IconColor = System.Drawing.Color.Black;
             this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogout.IconSize = 30;
-            this.btnLogout.Location = new System.Drawing.Point(0, 977);
+            this.btnLogout.Location = new System.Drawing.Point(0, 963);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(100, 44);
+            this.btnLogout.Size = new System.Drawing.Size(100, 58);
             this.btnLogout.TabIndex = 5;
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -143,17 +153,18 @@
             // btnDashboard
             // 
             this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
             this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.HouseUser;
-            this.btnDashboard.IconColor = System.Drawing.Color.Black;
+            this.btnDashboard.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
             this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDashboard.IconSize = 30;
             this.btnDashboard.Location = new System.Drawing.Point(0, 52);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(100, 44);
+            this.btnDashboard.Size = new System.Drawing.Size(100, 58);
             this.btnDashboard.TabIndex = 4;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -173,7 +184,7 @@
             // 
             // panelTopMenu
             // 
-            this.panelTopMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.panelTopMenu.BackColor = System.Drawing.Color.White;
             this.panelTopMenu.Controls.Add(this.label1);
             this.panelTopMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopMenu.Location = new System.Drawing.Point(100, 0);
@@ -185,12 +196,15 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1292, 20);
+            this.label1.Location = new System.Drawing.Point(1501, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "CURRENT LOGGED IN STAFF MEMBER";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panelDesktop
             // 
@@ -212,6 +226,28 @@
             this.panelChildForm.Size = new System.Drawing.Size(1784, 969);
             this.panelChildForm.TabIndex = 0;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnBilling
+            // 
+            this.btnBilling.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBilling.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
+            this.btnBilling.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnBilling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBilling.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnBilling.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.btnBilling.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
+            this.btnBilling.IconChar = FontAwesome.Sharp.IconChar.MoneyCheck;
+            this.btnBilling.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
+            this.btnBilling.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBilling.IconSize = 30;
+            this.btnBilling.Location = new System.Drawing.Point(0, 284);
+            this.btnBilling.Name = "btnBilling";
+            this.btnBilling.Size = new System.Drawing.Size(100, 58);
+            this.btnBilling.TabIndex = 9;
+            this.btnBilling.Text = "Billing";
+            this.btnBilling.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBilling.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnBilling.UseVisualStyleBackColor = true;
             // 
             // home
             // 
@@ -246,5 +282,6 @@
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnPatient;
         private FontAwesome.Sharp.IconButton btnSchedule;
+        private FontAwesome.Sharp.IconButton btnBilling;
     }
 }
