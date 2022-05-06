@@ -21,7 +21,7 @@ namespace MedicalSoftware
         private void dashboard_Load(object sender, EventArgs e)
         {
             SQLiteConnection conn = new SQLiteConnection(ConnectionString);
-            string query = "SELECT * from Appointments";
+            string query = "SELECT FirstName from Appointments";
             SQLiteCommand cmd = new SQLiteCommand(query, conn);
             DataTable dt = new DataTable();
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
@@ -41,6 +41,11 @@ namespace MedicalSoftware
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

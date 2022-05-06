@@ -11,5 +11,6 @@ namespace MedicalSoftware
         //Used for handling currently logged in user
         public static string globalUsername = "";
         public static string globalLastName = "";
+        public static string currentPatient = "";
     }
 }

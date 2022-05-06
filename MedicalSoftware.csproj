@@ -88,6 +88,24 @@
     <Compile Include="addPatient.Designer.cs">
       <DependentUpon>addPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="billing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="billing.Designer.cs">
+      <DependentUpon>billing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="calenderSquare.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="calenderSquare.Designer.cs">
+      <DependentUpon>calenderSquare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="calenderSquareFilled.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="calenderSquareFilled.Designer.cs">
+      <DependentUpon>calenderSquareFilled.cs</DependentUpon>
+    </Compile>
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,8 +145,21 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="billing.resx">
+      <DependentUpon>billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewPatient.resx">
+      <DependentUpon>viewPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\IMG_0313.JPG" />
     <EmbeddedResource Include="addPatient.resx">
       <DependentUpon>addPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="calenderSquare.resx">
+      <DependentUpon>calenderSquare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="calenderSquareFilled.resx">
+      <DependentUpon>calenderSquareFilled.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
@@ -147,6 +178,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Content Include="primaryDB.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

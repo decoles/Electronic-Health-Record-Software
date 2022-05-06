@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.btnSchedule = new FontAwesome.Sharp.IconButton();
-            this.btnPatient = new FontAwesome.Sharp.IconButton();
-            this.btnChart = new FontAwesome.Sharp.IconButton();
-            this.btnLogout = new FontAwesome.Sharp.IconButton();
-            this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTopMenu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.btnBilling = new FontAwesome.Sharp.IconButton();
+            this.btnSchedule = new FontAwesome.Sharp.IconButton();
+            this.btnPatient = new FontAwesome.Sharp.IconButton();
+            this.btnChart = new FontAwesome.Sharp.IconButton();
+            this.btnLogout = new FontAwesome.Sharp.IconButton();
+            this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.panelSideMenu.SuspendLayout();
             this.panelTopMenu.SuspendLayout();
             this.panelDesktop.SuspendLayout();
@@ -62,119 +62,9 @@
             this.panelSideMenu.Size = new System.Drawing.Size(100, 1021);
             this.panelSideMenu.TabIndex = 0;
             // 
-            // btnSchedule
-            // 
-            this.btnSchedule.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSchedule.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
-            this.btnSchedule.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSchedule.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnSchedule.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            this.btnSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
-            this.btnSchedule.IconChar = FontAwesome.Sharp.IconChar.Calendar;
-            this.btnSchedule.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
-            this.btnSchedule.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSchedule.IconSize = 30;
-            this.btnSchedule.Location = new System.Drawing.Point(0, 226);
-            this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Size = new System.Drawing.Size(100, 58);
-            this.btnSchedule.TabIndex = 8;
-            this.btnSchedule.Text = "Calender";
-            this.btnSchedule.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnSchedule.UseVisualStyleBackColor = true;
-            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
-            // 
-            // btnPatient
-            // 
-            this.btnPatient.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPatient.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
-            this.btnPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPatient.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnPatient.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            this.btnPatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
-            this.btnPatient.IconChar = FontAwesome.Sharp.IconChar.Male;
-            this.btnPatient.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
-            this.btnPatient.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPatient.IconSize = 30;
-            this.btnPatient.Location = new System.Drawing.Point(0, 168);
-            this.btnPatient.Name = "btnPatient";
-            this.btnPatient.Size = new System.Drawing.Size(100, 58);
-            this.btnPatient.TabIndex = 7;
-            this.btnPatient.Text = "Patient";
-            this.btnPatient.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPatient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPatient.UseVisualStyleBackColor = true;
-            this.btnPatient.Click += new System.EventHandler(this.btnPatient_Click);
-            // 
-            // btnChart
-            // 
-            this.btnChart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnChart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
-            this.btnChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChart.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnChart.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            this.btnChart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
-            this.btnChart.IconChar = FontAwesome.Sharp.IconChar.ChartArea;
-            this.btnChart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
-            this.btnChart.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnChart.IconSize = 30;
-            this.btnChart.Location = new System.Drawing.Point(0, 110);
-            this.btnChart.Name = "btnChart";
-            this.btnChart.Size = new System.Drawing.Size(100, 58);
-            this.btnChart.TabIndex = 6;
-            this.btnChart.Text = "Charts";
-            this.btnChart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnChart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnChart.UseVisualStyleBackColor = true;
-            this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.Lock;
-            this.btnLogout.IconColor = System.Drawing.Color.Black;
-            this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLogout.IconSize = 30;
-            this.btnLogout.Location = new System.Drawing.Point(0, 963);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(100, 58);
-            this.btnLogout.TabIndex = 5;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
-            this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.HouseUser;
-            this.btnDashboard.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
-            this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDashboard.IconSize = 30;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 52);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(100, 58);
-            this.btnDashboard.TabIndex = 4;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
             // panelLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.White;
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
@@ -184,7 +74,7 @@
             // 
             // panelTopMenu
             // 
-            this.panelTopMenu.BackColor = System.Drawing.Color.White;
+            this.panelTopMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
             this.panelTopMenu.Controls.Add(this.label1);
             this.panelTopMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopMenu.Location = new System.Drawing.Point(100, 0);
@@ -248,6 +138,116 @@
             this.btnBilling.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBilling.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBilling.UseVisualStyleBackColor = true;
+            // 
+            // btnSchedule
+            // 
+            this.btnSchedule.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSchedule.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
+            this.btnSchedule.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSchedule.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnSchedule.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.btnSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
+            this.btnSchedule.IconChar = FontAwesome.Sharp.IconChar.Calendar;
+            this.btnSchedule.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
+            this.btnSchedule.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSchedule.IconSize = 30;
+            this.btnSchedule.Location = new System.Drawing.Point(0, 226);
+            this.btnSchedule.Name = "btnSchedule";
+            this.btnSchedule.Size = new System.Drawing.Size(100, 58);
+            this.btnSchedule.TabIndex = 8;
+            this.btnSchedule.Text = "Calender";
+            this.btnSchedule.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSchedule.UseVisualStyleBackColor = true;
+            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
+            // 
+            // btnPatient
+            // 
+            this.btnPatient.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPatient.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
+            this.btnPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPatient.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnPatient.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.btnPatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
+            this.btnPatient.IconChar = FontAwesome.Sharp.IconChar.Male;
+            this.btnPatient.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
+            this.btnPatient.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPatient.IconSize = 30;
+            this.btnPatient.Location = new System.Drawing.Point(0, 168);
+            this.btnPatient.Name = "btnPatient";
+            this.btnPatient.Size = new System.Drawing.Size(100, 58);
+            this.btnPatient.TabIndex = 7;
+            this.btnPatient.Text = "Patient";
+            this.btnPatient.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPatient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPatient.UseVisualStyleBackColor = true;
+            this.btnPatient.Click += new System.EventHandler(this.btnPatient_Click);
+            // 
+            // btnChart
+            // 
+            this.btnChart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
+            this.btnChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChart.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnChart.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.btnChart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
+            this.btnChart.IconChar = FontAwesome.Sharp.IconChar.ChartArea;
+            this.btnChart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
+            this.btnChart.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnChart.IconSize = 30;
+            this.btnChart.Location = new System.Drawing.Point(0, 110);
+            this.btnChart.Name = "btnChart";
+            this.btnChart.Size = new System.Drawing.Size(100, 58);
+            this.btnChart.TabIndex = 6;
+            this.btnChart.Text = "Charting";
+            this.btnChart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnChart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnChart.UseVisualStyleBackColor = true;
+            this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.Lock;
+            this.btnLogout.IconColor = System.Drawing.Color.Black;
+            this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogout.IconSize = 30;
+            this.btnLogout.Location = new System.Drawing.Point(0, 963);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(100, 58);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(132)))));
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
+            this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.HouseUser;
+            this.btnDashboard.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
+            this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDashboard.IconSize = 30;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 52);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(100, 58);
+            this.btnDashboard.TabIndex = 4;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // home
             // 
