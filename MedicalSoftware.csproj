@@ -113,6 +113,12 @@
       <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
+    <Compile Include="newAppPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newAppPopup.Designer.cs">
+      <DependentUpon>newAppPopup.cs</DependentUpon>
+    </Compile>
     <Compile Include="schedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </Compile>
     <EmbeddedResource Include="billing.resx">
       <DependentUpon>billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newAppPopup.resx">
+      <DependentUpon>newAppPopup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewPatient.resx">
       <DependentUpon>viewPatient.cs</DependentUpon>
