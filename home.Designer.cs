@@ -30,23 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(home));
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelTopMenu = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.btnBilling = new FontAwesome.Sharp.IconButton();
             this.btnSchedule = new FontAwesome.Sharp.IconButton();
             this.btnPatient = new FontAwesome.Sharp.IconButton();
             this.btnChart = new FontAwesome.Sharp.IconButton();
             this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.btnDashboard = new FontAwesome.Sharp.IconButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelTopMenu = new System.Windows.Forms.Panel();
+            this.lblUSER = new System.Windows.Forms.Label();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTopMenu.SuspendLayout();
             this.panelDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -65,64 +65,6 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(100, 1021);
             this.panelSideMenu.TabIndex = 0;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(100, 52);
-            this.panelLogo.TabIndex = 1;
-            // 
-            // panelTopMenu
-            // 
-            this.panelTopMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
-            this.panelTopMenu.Controls.Add(this.label1);
-            this.panelTopMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTopMenu.Location = new System.Drawing.Point(100, 0);
-            this.panelTopMenu.Margin = new System.Windows.Forms.Padding(2);
-            this.panelTopMenu.Name = "panelTopMenu";
-            this.panelTopMenu.Size = new System.Drawing.Size(1784, 52);
-            this.panelTopMenu.TabIndex = 1;
-            this.panelTopMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTopMenu_Paint);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
-            this.label1.Location = new System.Drawing.Point(1504, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CURRENT LOGGED IN STAFF MEMBER";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panelDesktop.Controls.Add(this.panelChildForm);
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(100, 52);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1784, 969);
-            this.panelDesktop.TabIndex = 2;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(0, 0);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.panelChildForm.Size = new System.Drawing.Size(1784, 969);
-            this.panelChildForm.TabIndex = 0;
-            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnBilling
             // 
@@ -145,6 +87,7 @@
             this.btnBilling.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBilling.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBilling.UseVisualStyleBackColor = true;
+            this.btnBilling.Click += new System.EventHandler(this.btnBilling_Click);
             // 
             // btnSchedule
             // 
@@ -256,6 +199,17 @@
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(100, 52);
+            this.panelLogo.TabIndex = 1;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -266,6 +220,53 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelTopMenu
+            // 
+            this.panelTopMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
+            this.panelTopMenu.Controls.Add(this.lblUSER);
+            this.panelTopMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTopMenu.Location = new System.Drawing.Point(100, 0);
+            this.panelTopMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.panelTopMenu.Name = "panelTopMenu";
+            this.panelTopMenu.Size = new System.Drawing.Size(1784, 52);
+            this.panelTopMenu.TabIndex = 1;
+            this.panelTopMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTopMenu_Paint);
+            // 
+            // lblUSER
+            // 
+            this.lblUSER.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUSER.AutoSize = true;
+            this.lblUSER.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUSER.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
+            this.lblUSER.Location = new System.Drawing.Point(1439, 9);
+            this.lblUSER.Name = "lblUSER";
+            this.lblUSER.Size = new System.Drawing.Size(276, 21);
+            this.lblUSER.TabIndex = 0;
+            this.lblUSER.Text = "CURRENT LOGGED IN STAFF MEMBER";
+            this.lblUSER.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panelDesktop.Controls.Add(this.panelChildForm);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(100, 52);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1784, 969);
+            this.panelDesktop.TabIndex = 2;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(0, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.panelChildForm.Size = new System.Drawing.Size(1784, 969);
+            this.panelChildForm.TabIndex = 0;
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // home
             // 
@@ -281,10 +282,10 @@
             this.Load += new System.EventHandler(this.home_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTopMenu.ResumeLayout(false);
             this.panelTopMenu.PerformLayout();
             this.panelDesktop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -299,7 +300,7 @@
         private FontAwesome.Sharp.IconButton btnLogout;
         private FontAwesome.Sharp.IconButton btnChart;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUSER;
         private FontAwesome.Sharp.IconButton btnPatient;
         private FontAwesome.Sharp.IconButton btnSchedule;
         private FontAwesome.Sharp.IconButton btnBilling;

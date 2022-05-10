@@ -18,15 +18,16 @@ namespace MedicalSoftware
             InitializeComponent();
 
         }
-
         private void home_Load(object sender, EventArgs e)
         {
             //Starts dashboard from scratch
+            lblUSER.Text = "Welcome " + Global.globalFirstName + " "+Global.globalLastName;
             openChildForm(new dashboard());
         }
 
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
+            Global.globalLastName = "";
             this.Close();
             new formLogin().Show();
         }
@@ -63,7 +64,7 @@ namespace MedicalSoftware
 
         private void btnPatient_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new viewPatient());
         }
 
         private void btnSchedule_Click(object sender, EventArgs e)
@@ -83,7 +84,12 @@ namespace MedicalSoftware
 
         private void label1_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void btnBilling_Click(object sender, EventArgs e)
+        {
+            openChildForm(new billing());
         }
     }
 }

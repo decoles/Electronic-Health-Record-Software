@@ -21,5 +21,12 @@ namespace MedicalSoftware
         {
 
         }
+
+        private void viewPatient_Load(object sender, EventArgs e)
+        {
+            PickAPatientFrm pickAPatient = new PickAPatientFrm();
+            pickAPatient.Show();
+
+        }
     }
 }

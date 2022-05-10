@@ -36,5 +36,17 @@ namespace MedicalSoftware
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            txtPatientId.Text = random.Next(00000, 99999).ToString();
+        }
+
+        private void addPatient_Load(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            txtPatientId.Text = random.Next(00000, 99999).ToString();
+        }
     }
 }

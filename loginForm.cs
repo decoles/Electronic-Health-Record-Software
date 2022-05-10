@@ -21,6 +21,7 @@ namespace MedicalSoftware
         }
         SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\primaryDB.db");
         SQLiteCommand cmd = new SQLiteCommand();
+        SQLiteDataAdapter adapter = new SQLiteDataAdapter();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -50,11 +51,24 @@ namespace MedicalSoftware
             else
             {
                 //ON LOGIN GET LAST NAME AND USERNAME AS THAT WILL BE UNIQUE
-                Global.globalUsername = txtId.Text;
-                MessageBox.Show(Global.globalUsername);
-                home homefrm = new home();
-                homefrm.Show();
-                this.Hide();
+                conn.Open();
+                string query = "SELECT * FROM Staff WHERE Username = '" +txtId.Text + "' and Password= '"+txtpswd.Text+"'";
+                cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader dataReader = cmd.ExecuteReader();
+                if(dataReader.Read())
+                {
+                    Global.globalFirstName = dataReader[1].ToString();
+                    Global.globalLastName = dataReader[2].ToString();
+                    home homefrm = new home();
+                    homefrm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("INVALID USERNAME OR PASSWORD");
+                }
+                conn.Close();
+
             }
 
         }

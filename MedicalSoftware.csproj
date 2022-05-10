@@ -119,6 +119,12 @@
     <Compile Include="newAppPopup.Designer.cs">
       <DependentUpon>newAppPopup.cs</DependentUpon>
     </Compile>
+    <Compile Include="PickAPatientFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickAPatientFrm.Designer.cs">
+      <DependentUpon>PickAPatientFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="schedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="newAppPopup.resx">
       <DependentUpon>newAppPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickAPatientFrm.resx">
+      <DependentUpon>PickAPatientFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewPatient.resx">
       <DependentUpon>viewPatient.cs</DependentUpon>

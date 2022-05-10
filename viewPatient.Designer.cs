@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label14
+            // label15
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label14.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(12, 9);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(254, 30);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Patient Overview";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label15.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(12, 9);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(230, 43);
+            this.label15.TabIndex = 35;
+            this.label15.Text = "View Patient";
             // 
             // viewPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1684, 961);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label15);
             this.Name = "viewPatient";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.viewPatient_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label14;
+
+        private System.Windows.Forms.Label label15;
     }
 }
