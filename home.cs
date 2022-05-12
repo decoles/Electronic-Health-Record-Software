@@ -64,20 +64,9 @@ namespace MedicalSoftware
 
         private void btnPatient_Click(object sender, EventArgs e)
         {
-            if(Global.currentPatient == "")
-            {
-                PickAPatientFrm pickAPatient = new PickAPatientFrm();
-                pickAPatient.Show();
-                if(Global.currentPatient!= "")
-                {
-                    openChildForm(new viewPatient());
-                }
-            }
-            else
-            {
-                openChildForm(new viewPatient());
 
-            }
+               openChildForm(new viewPatient());
+                
         }
 
         private void btnSchedule_Click(object sender, EventArgs e)

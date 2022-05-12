@@ -39,33 +39,40 @@ namespace MedicalSoftware
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (txtId.Text == "" || txtpswd.Text == "" || txtpwdredo.Text == "" || txtFirName.Text == "" || txtLastName.Text == "")
+            try
             {
-                MessageBox.Show("Please fill in all fields");
-            }
-            else if(txtpswd.Text == txtpwdredo.Text)
-            {
-                conn.Open();
-                string register = "INSERT INTO Staff  (Username, Password, FirstName, LastName)";
-                string values = "VALUES ('" + txtId.Text + "','" + txtpswd.Text + "','" + txtFirName.Text + "','" + txtLastName.Text + "')";
-                string together = register + values;
-                //if(txtId.Text == )
-                cmd = new SQLiteCommand(together, conn);
-       
-                int a = cmd.ExecuteNonQuery();
-                if(a > 0) //Checks if value is created should be greater than one when created.
+                if (txtId.Text == "" || txtpswd.Text == "" || txtpwdredo.Text == "" || txtFirName.Text == "" || txtLastName.Text == "")
                 {
-                    MessageBox.Show("Account Created!");
+                    MessageBox.Show("Please fill in all fields");
                 }
-                conn.Close();
-                new formLogin().Show();
-                this.Hide();
+                else if (txtpswd.Text == txtpwdredo.Text)
+                {
+                    conn.Open();
+                    string register = "INSERT INTO Staff  (Username, Password, FirstName, LastName)";
+                    string values = "VALUES ('" + txtId.Text + "','" + txtpswd.Text + "','" + txtFirName.Text + "','" + txtLastName.Text + "')";
+                    string together = register + values;
+                    //if(txtId.Text == )
+                    cmd = new SQLiteCommand(together, conn);
+
+                    int a = cmd.ExecuteNonQuery();
+                    if (a > 0) //Checks if value is created should be greater than one when created.
+                    {
+                        MessageBox.Show("Account Created!");
+                    }
+                    conn.Close();
+                    new formLogin().Show();
+                    this.Hide();
 
 
+                }
+                else
+                {
+                    MessageBox.Show("Passwords Do not Match");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Passwords Do not Match");
+                MessageBox.Show("Please Change Username");
             }
         }
 

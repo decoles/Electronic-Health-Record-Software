@@ -157,6 +157,15 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="WaitingRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitingRoom.Designer.cs">
+      <DependentUpon>WaitingRoom.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="WaitingRoom.resx">
+      <DependentUpon>WaitingRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Resources\person-icon-transparent-background-9.jpg" />
     <EmbeddedResource Include="billing.resx">
       <DependentUpon>billing.cs</DependentUpon>

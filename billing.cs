@@ -27,22 +27,29 @@ namespace MedicalSoftware
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\primaryDB.db"))
+            if (txtSearch.Text != "")
             {
-                if(conn.State == ConnectionState.Open)
-                    conn.Open();
-                using(DataTable dt = new DataTable("Billing"))
-                {
-                    using(SQLiteCommand cmd = new SQLiteCommand("Select * from Billing where PatientId=@PatientId or Patient like @Patient", conn))
-                    {
-                        cmd.Parameters.AddWithValue("PatientId", txtSearch.Text);
-                        cmd.Parameters.AddWithValue("Patient", txtSearch.Text);
-                        SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
-                        da.Fill(dt);
-                        gridpatients.DataSource = dt;
-
-                    }
-                }
+                SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\primaryDB.db");
+                string query = "SELECT * from Billing WHERE Patient ='" + txtSearch + "' ";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                DataTable dt = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                adapter.Fill(dt);
+                gridpatients.DataSource = dt;
+                conn.Close();
+                adapter.Dispose();
+            }
+            else
+            {
+                SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\primaryDB.db");
+                string query = "SELECT * from Billing WHERE Patient NOT NULL";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                DataTable dt = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                adapter.Fill(dt);
+                gridpatients.DataSource = dt;
+                conn.Close();
+                adapter.Dispose();
             }
         }
         private void refresh()
@@ -55,6 +62,7 @@ namespace MedicalSoftware
             adapter.Fill(dt);
             gridpatients.DataSource = dt;
             conn.Close();
+            adapter.Dispose();
             txtCreatedby.Text = Global.globalFirstName + Global.globalLastName;
         }
         private void billing_Load(object sender, EventArgs e)
@@ -100,6 +108,11 @@ namespace MedicalSoftware
                 MessageBox.Show(ex.Message);
             }
             refresh();
+        }
+
+        private void comboStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

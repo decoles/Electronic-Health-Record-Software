@@ -371,7 +371,7 @@
             this.GridWaitingRm.RowHeadersVisible = false;
             this.GridWaitingRm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.GridWaitingRm.ShowEditingIcon = false;
-            this.GridWaitingRm.Size = new System.Drawing.Size(245, 845);
+            this.GridWaitingRm.Size = new System.Drawing.Size(245, 765);
             this.GridWaitingRm.TabIndex = 56;
             // 
             // panel3
@@ -396,11 +396,11 @@
             this.iconButton4.IconColor = System.Drawing.Color.Black;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 30;
-            this.iconButton4.Location = new System.Drawing.Point(47, 4);
+            this.iconButton4.Location = new System.Drawing.Point(34, 4);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(210, 47);
             this.iconButton4.TabIndex = 57;
-            this.iconButton4.Text = "Money";
+            this.iconButton4.Text = "Unpaid Bills";
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = true;
             // 

@@ -239,8 +239,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUSER.AutoSize = true;
             this.lblUSER.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUSER.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(141)))), ((int)(((byte)(210)))));
-            this.lblUSER.Location = new System.Drawing.Point(1439, 9);
+            this.lblUSER.ForeColor = System.Drawing.Color.Gray;
+            this.lblUSER.Location = new System.Drawing.Point(1410, 15);
             this.lblUSER.Name = "lblUSER";
             this.lblUSER.Size = new System.Drawing.Size(276, 21);
             this.lblUSER.TabIndex = 0;

@@ -76,7 +76,28 @@ namespace MedicalSoftware
 
         private void bntMedSave_Click(object sender, EventArgs e)
         {
+            SQLiteConnection conn = new SQLiteConnection(ConnectionString);
+            conn.Open();
+            string sqlquery = "INSERT INTO Medication(Medication, Dosage, Name, PatientId, Notes) values (?,?,?,?,?)";
+            SQLiteCommand cmd = conn.CreateCommand();
+            cmd.CommandText = sqlquery;
+            cmd.Parameters.AddWithValue("Medication", txtMedMedication.Text);
+            cmd.Parameters.AddWithValue("Dosage", txtMedDosage.Text);
+            cmd.Parameters.AddWithValue("Name", txtMedFirst.Text + " " +txtMedLast.Text);
+            cmd.Parameters.AddWithValue("PatientId", txtPatientId.Text);
+            cmd.Parameters.AddWithValue("Notes", txtMedNotes);
 
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("DEBUG UPLOAD OK RELOADING BELOW");
+            conn.Close();
+            cmd.Dispose();
+
+            txtMedFirst.Clear();
+            txtMedLast.Clear();
+            txtMedID.Clear();
+            txtMedMedication.Clear();
+            txtMedDosage.Clear();
+            txtMedNotes.Clear();
         }
 
         private void btnDiagClear_Click(object sender, EventArgs e)
@@ -143,6 +164,7 @@ namespace MedicalSoftware
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("DEBUG UPLOAD OK RELOADING BELOW");
                 conn.Close();
+                cmd.Dispose();
                 txtFirstname.Clear();
                 txtLastname.Clear();
                 txtphone.Clear();
@@ -201,6 +223,91 @@ namespace MedicalSoftware
             //REST OF PARTS
             //ON LOGIN GET LAST NAME AND USERNAME AS THAT WILL BE UNIQUE
 
+        }
+
+        private void btnVitalSave_Click(object sender, EventArgs e)
+        {
+            SQLiteConnection conn = new SQLiteConnection(ConnectionString);
+            conn.Open();
+            string sqlquery = "INSERT INTO Vitals(PatientId, Temperature, BloodPressure, Spo2,pain, LevelofAwareness, Notes, Height, Weight) values (?,?,?,?,?,?,?,?,?)";
+            SQLiteCommand cmd = conn.CreateCommand();
+            cmd.CommandText = sqlquery;
+            cmd.Parameters.AddWithValue("PatientId", txtVitalPain.Text);
+            cmd.Parameters.AddWithValue("Temperature", txtVitaTemp.Text);
+            cmd.Parameters.AddWithValue("BloodPressure", txtVitaBP.Text);
+            cmd.Parameters.AddWithValue("Spo2", txtVitaSPO.Text);
+            cmd.Parameters.AddWithValue("pain", txtVitalPain.Text);
+            cmd.Parameters.AddWithValue("LevelofAwareness", comboLOV.GetItemText(comboLOV.SelectedItem));
+            cmd.Parameters.AddWithValue("Notes", txtVitaNote.Text);
+            cmd.Parameters.AddWithValue("Height", txtVitalHeight.Text);
+            cmd.Parameters.AddWithValue("Weight", txtVitalWeight.Text);
+
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("DEBUG UPLOAD OK RELOADING BELOW");
+            conn.Close();
+            cmd.Dispose();
+
+
+            txtVitalId.Clear();
+            txtVitaTemp.Clear();
+            txtVitaBP.Clear();
+            txtVitaSPO.Clear();
+            txtVitalPain.Clear();
+            txtVitaNote.Clear();
+            txtVitalHeight.Clear();
+            txtVitalWeight.Clear();
+
+        }
+
+        private void btnDiagSave_Click(object sender, EventArgs e)
+        {
+            SQLiteConnection conn = new SQLiteConnection(ConnectionString);
+            conn.Open();
+            string sqlquery = "INSERT INTO Diagnoses(PatientId, Issue, Severity, Notes) values (?,?,?,?)";
+            SQLiteCommand cmd = conn.CreateCommand();
+            cmd.CommandText = sqlquery;
+            cmd.Parameters.AddWithValue("PatientId", txtDiagID.Text);
+            cmd.Parameters.AddWithValue("Issue", txtDiagIssue.Text);
+            cmd.Parameters.AddWithValue("Severity", txtDiagSeverity.Text);
+            cmd.Parameters.AddWithValue("Notes", txtDiagSeverity.Text);
+
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("DEBUG UPLOAD OK RELOADING BELOW");
+            conn.Close();
+            cmd.Dispose();
+
+
+            txtPatientId.Clear();
+            txtDiagIssue.Clear();
+            txtMedDosage.Clear();
+            txtDiagNotes.Clear();
+        }
+
+        private void btnAllergiesSave_Click(object sender, EventArgs e)
+        {
+            SQLiteConnection conn = new SQLiteConnection(ConnectionString);
+            conn.Open();
+            string sqlquery = "INSERT INTO Allergies(PatientId, Foodallergies, Drugallergies) values (?,?,?)";
+            SQLiteCommand cmd = conn.CreateCommand();
+            cmd.CommandText = sqlquery;
+            cmd.Parameters.AddWithValue("PatientId", txtAllergyId.Text);
+            cmd.Parameters.AddWithValue("Foodallergies", txtFoodAllergies.Text);
+            cmd.Parameters.AddWithValue("Drugallergies", txtDrugAllergies.Text);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("DEBUG UPLOAD OK RELOADING BELOW");
+            conn.Close();
+            cmd.Dispose();
+
+            txtAllergyId.Clear();
+            txtFoodAllergies.Clear();
+            txtDrugAllergies.Clear();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            txtAllergyId.Clear();
+            txtFoodAllergies.Clear();
+            txtDrugAllergies.Clear();
         }
     }
 }
