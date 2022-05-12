@@ -37,74 +37,94 @@ namespace MedicalSoftware
         }
         private int getSizeofAppointments()
         {
-            int waitingcount;
-            SQLiteConnection conn = new SQLiteConnection(ConnectionString);
-            string query = "SELECT count(Lastname) from WaitingRoom where Lastname NOT NULL";
-            SQLiteCommand cmd = new SQLiteCommand(query, conn);
-            conn.Open();
-            cmd.CommandType = CommandType.Text;
-            waitingcount = Convert.ToInt32(cmd.ExecuteScalar());
-            conn.Close();
-            return waitingcount;
+            try
+            {
+                int waitingcount;
+                SQLiteConnection conn = new SQLiteConnection(ConnectionString);
+                string query = "SELECT count(Lastname) from WaitingRoom where Lastname NOT NULL";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                conn.Open();
+                cmd.CommandType = CommandType.Text;
+                waitingcount = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
+                return waitingcount;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
 
         }
         private void getBillPercentages()
         {
-            SQLiteConnection conn = new SQLiteConnection(ConnectionString);
-            string query = "SELECT count(Patient) from Billing where Patient NOT NULL AND Status = 'Unpaid'";
-            SQLiteCommand cmd = new SQLiteCommand(query, conn);
-            conn.Open();
-            cmd.CommandType = CommandType.Text;
-            Unpaid = Convert.ToInt32(cmd.ExecuteScalar());
-            conn.Close();
+            try
+            {
+                SQLiteConnection conn = new SQLiteConnection(ConnectionString);
+                string query = "SELECT count(Patient) from Billing where Patient NOT NULL AND Status = 'Unpaid'";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                conn.Open();
+                cmd.CommandType = CommandType.Text;
+                Unpaid = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
 
-            conn = new SQLiteConnection(ConnectionString);
-            query = "SELECT count(Patient) from Billing where Patient NOT NULL AND Status = 'Paid'";
-            cmd = new SQLiteCommand(query, conn);
-            conn.Open();
-            cmd.CommandType = CommandType.Text;
-            Paid = Convert.ToInt32(cmd.ExecuteScalar());
-            conn.Close();
+                conn = new SQLiteConnection(ConnectionString);
+                query = "SELECT count(Patient) from Billing where Patient NOT NULL AND Status = 'Paid'";
+                cmd = new SQLiteCommand(query, conn);
+                conn.Open();
+                cmd.CommandType = CommandType.Text;
+                Paid = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
 
-            conn = new SQLiteConnection(ConnectionString);
-            query = "SELECT count(Patient) from Billing where Patient NOT NULL AND Status = 'Payment Plan'";
-            cmd = new SQLiteCommand(query, conn);
-            conn.Open();
-            cmd.CommandType = CommandType.Text;
-            PayemntPlan = Convert.ToInt32(cmd.ExecuteScalar());
-            conn.Close();
+                conn = new SQLiteConnection(ConnectionString);
+                query = "SELECT count(Patient) from Billing where Patient NOT NULL AND Status = 'Payment Plan'";
+                cmd = new SQLiteCommand(query, conn);
+                conn.Open();
+                cmd.CommandType = CommandType.Text;
+                PayemntPlan = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
 
-            conn = new SQLiteConnection(ConnectionString);
-            query = "SELECT count(Id) from Patients where Lastname NOT NULL";
-            cmd = new SQLiteCommand(query, conn);
-            conn.Open();
-            cmd.CommandType = CommandType.Text;
-            TotalPatients = Convert.ToInt32(cmd.ExecuteScalar());
-            conn.Close();
+                conn = new SQLiteConnection(ConnectionString);
+                query = "SELECT count(Id) from Patients where Lastname NOT NULL";
+                cmd = new SQLiteCommand(query, conn);
+                conn.Open();
+                cmd.CommandType = CommandType.Text;
+                TotalPatients = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
 
-            conn = new SQLiteConnection(ConnectionString);
-            query = "SELECT count(Amount) from Billing where Patient NOT NULL AND Status = 'Unpaid'";
-            cmd = new SQLiteCommand(query, conn);
-            conn.Open();
-            cmd.CommandType = CommandType.Text;
-            SUMUNPAID = Convert.ToInt32(cmd.ExecuteScalar());
-            conn.Close();
+                conn = new SQLiteConnection(ConnectionString);
+                query = "SELECT count(Amount) from Billing where Patient NOT NULL AND Status = 'Unpaid'";
+                cmd = new SQLiteCommand(query, conn);
+                conn.Open();
+                cmd.CommandType = CommandType.Text;
+                SUMUNPAID = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
 
-            conn = new SQLiteConnection(ConnectionString);
-            query = "SELECT SUM(Amount) from Billing where Patient NOT NULL AND Status = 'Paid'";
-            cmd = new SQLiteCommand(query, conn);
-            conn.Open();
-            cmd.CommandType = CommandType.Text;
-            SUMPAID = Convert.ToInt32(cmd.ExecuteScalar());
-            conn.Close();
+                conn = new SQLiteConnection(ConnectionString);
+                query = "SELECT SUM(Amount) from Billing where Patient NOT NULL AND Status = 'Paid'";
+                cmd = new SQLiteCommand(query, conn);
+                conn.Open();
+                cmd.CommandType = CommandType.Text;
+                SUMPAID = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
 
-            conn = new SQLiteConnection(ConnectionString);
-            query = "SELECT SUM(Amount) from Billing where Patient NOT NULL AND Status = 'Payment Plan'";
-            cmd = new SQLiteCommand(query, conn);
-            conn.Open();
-            cmd.CommandType = CommandType.Text;
-            SUMPAYMENTPLAN = Convert.ToInt32(cmd.ExecuteScalar());
-            conn.Close();
+                conn = new SQLiteConnection(ConnectionString);
+                query = "SELECT SUM(Amount) from Billing where Patient NOT NULL AND Status = 'Payment Plan'";
+                cmd = new SQLiteCommand(query, conn);
+                conn.Open();
+                cmd.CommandType = CommandType.Text;
+                SUMPAYMENTPLAN = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Unpaid = 0;
+                Paid = 0;
+                PayemntPlan = 0;
+                TotalPatients = 0;
+                SUMUNPAID = 0;
+                SUMPAID= 0;
+                SUMPAYMENTPLAN = 0;
+            }
 
         }
 
@@ -113,9 +133,7 @@ namespace MedicalSoftware
             try
             {
                 getBillPercentages();
-                decimal percentageOpen = 0;
-                decimal percentageWaiting = ((decimal)getSizeofAppointments() / (decimal)WaitingRoomTotal) * 100;
-                percentageOpen = 100 - percentageWaiting;
+
 
                 decimal unpaidpercent = (decimal)Unpaid;
                 decimal paidpercent = (decimal)Paid;
@@ -127,10 +145,9 @@ namespace MedicalSoftware
                 var paidpercent1 = (decimal)paidpercent / (decimal)total;
                 var paymentplanpercent1 = (decimal)paymentplanpercent / (decimal)total;
 
-                chart3.Series["Total Appointments"].Points.Clear();
+                
                 chartBiling.Series["Money"].Points.Clear();
-                chart3.Series["Total Appointments"].Points.AddXY("Available", percentageOpen);
-                chart3.Series["Total Appointments"].Points.AddXY("Current", percentageWaiting);
+
                 chartBiling.Series["Money"].Points.AddXY("Unpaid", unpaidpercent1);
                 chartBiling.Series["Money"].Points.AddXY("Paid", paidpercent1);
                 chartBiling.Series["Money"].Points.AddXY("Payment Plan", paymentplanpercent1);
@@ -140,8 +157,32 @@ namespace MedicalSoftware
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                chartBiling.Series["Money"].Points.Clear();
+                chartBiling.Series["Money"].Points.AddXY("Unpaid", 0.3333);
+                chartBiling.Series["Money"].Points.AddXY("Paid", 0.3333);
+                chartBiling.Series["Money"].Points.AddXY("Payment Plan", 0.3333);
+                lblActivePatients.Text = TotalPatients.ToString();
+                lblTotalEarned.Text = "$" + SUMPAID.ToString();
+                lblUnpaid.Text = "$" + (SUMUNPAID + SUMPAYMENTPLAN).ToString();
             }
+            try
+            {
+                decimal percentageOpen = 0;
+                decimal percentageWaiting = ((decimal)getSizeofAppointments() / (decimal)WaitingRoomTotal) * 100;
+                percentageOpen = 100 - percentageWaiting;
+                chart3.Series["Total Appointments"].Points.Clear();
+                chart3.Series["Total Appointments"].Points.AddXY("Available", percentageOpen);
+                chart3.Series["Total Appointments"].Points.AddXY("Current", percentageWaiting);
+            }
+            catch (Exception ex)
+            {
+                chart3.Series["Total Appointments"].Points.Clear();
+                chart3.Series["Total Appointments"].Points.AddXY("Available", 0);
+                chart3.Series["Total Appointments"].Points.AddXY("Current", 0);
+            }
+            lblActivePatients.Text = TotalPatients.ToString();
+            lblTotalEarned.Text = "$" + SUMPAID.ToString();
+            lblUnpaid.Text = "$" + (SUMUNPAID + SUMPAYMENTPLAN).ToString();
         }
 
 

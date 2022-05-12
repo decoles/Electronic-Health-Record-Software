@@ -31,7 +31,6 @@ namespace MedicalSoftware
             {
                 SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\primaryDB.db");
                 string query = "SELECT * from Billing WHERE Patient LIKE '" + txtSearch.Text + "' OR Amount LIKE '" + txtSearch.Text + "' OR Status LIKE '" + txtSearch.Text + "' ";
-                MessageBox.Show(query.ToString());
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 DataTable dt = new DataTable();
                 SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
@@ -65,6 +64,7 @@ namespace MedicalSoftware
             conn.Close();
             adapter.Dispose();
             txtCreatedby.Text = Global.globalFirstName + " " + Global.globalLastName;
+            txtDateCreated.Text = DateTime.Now.ToString("MM/dd/yyyy");
         }
         private void billing_Load(object sender, EventArgs e)
         {
@@ -93,7 +93,6 @@ namespace MedicalSoftware
 
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("DEBUG UPLOAD OK RELOADING BELOW");
                 conn.Close();
                 txtPatientName.Clear();
                 txtPatientId.Clear();

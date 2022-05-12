@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
@@ -117,28 +117,28 @@
             this.gridpatients.AllowUserToDeleteRows = false;
             this.gridpatients.AllowUserToResizeColumns = false;
             this.gridpatients.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridpatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridpatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.gridpatients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridpatients.BackgroundColor = System.Drawing.Color.White;
             this.gridpatients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridpatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridpatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.gridpatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridpatients.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridpatients.DefaultCellStyle = dataGridViewCellStyle9;
             this.gridpatients.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.gridpatients.Location = new System.Drawing.Point(25, 61);
             this.gridpatients.MultiSelect = false;
@@ -195,7 +195,7 @@
             this.txtPatientId.Margin = new System.Windows.Forms.Padding(4);
             this.txtPatientId.Name = "txtPatientId";
             this.txtPatientId.Size = new System.Drawing.Size(276, 35);
-            this.txtPatientId.TabIndex = 93;
+            this.txtPatientId.TabIndex = 8;
             // 
             // txtCreatedby
             // 
@@ -206,7 +206,7 @@
             this.txtCreatedby.Name = "txtCreatedby";
             this.txtCreatedby.ReadOnly = true;
             this.txtCreatedby.Size = new System.Drawing.Size(276, 35);
-            this.txtCreatedby.TabIndex = 92;
+            this.txtCreatedby.TabIndex = 7;
             this.txtCreatedby.TextChanged += new System.EventHandler(this.txtCreatedby_TextChanged);
             // 
             // txtNotes
@@ -218,7 +218,7 @@
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(276, 112);
-            this.txtNotes.TabIndex = 91;
+            this.txtNotes.TabIndex = 6;
             // 
             // txtAmount
             // 
@@ -228,7 +228,7 @@
             this.txtAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(276, 35);
-            this.txtAmount.TabIndex = 90;
+            this.txtAmount.TabIndex = 5;
             // 
             // comboStatus
             // 
@@ -237,12 +237,12 @@
             this.comboStatus.FormattingEnabled = true;
             this.comboStatus.Items.AddRange(new object[] {
             "Paid",
-            "Unpaid",
-            "Payment Plan"});
+            "Payment Plan",
+            "Unpaid"});
             this.comboStatus.Location = new System.Drawing.Point(183, 325);
             this.comboStatus.Name = "comboStatus";
             this.comboStatus.Size = new System.Drawing.Size(276, 38);
-            this.comboStatus.TabIndex = 89;
+            this.comboStatus.TabIndex = 4;
             this.comboStatus.SelectedIndexChanged += new System.EventHandler(this.comboStatus_SelectedIndexChanged);
             // 
             // label10
@@ -293,7 +293,7 @@
             this.txtService.Margin = new System.Windows.Forms.Padding(4);
             this.txtService.Name = "txtService";
             this.txtService.Size = new System.Drawing.Size(276, 35);
-            this.txtService.TabIndex = 83;
+            this.txtService.TabIndex = 3;
             // 
             // txtDateCreated
             // 
@@ -303,7 +303,7 @@
             this.txtDateCreated.Margin = new System.Windows.Forms.Padding(4);
             this.txtDateCreated.Name = "txtDateCreated";
             this.txtDateCreated.Size = new System.Drawing.Size(276, 35);
-            this.txtDateCreated.TabIndex = 82;
+            this.txtDateCreated.TabIndex = 2;
             // 
             // label5
             // 
@@ -354,7 +354,7 @@
             this.btnSaveNewBill.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveNewBill.Name = "btnSaveNewBill";
             this.btnSaveNewBill.Size = new System.Drawing.Size(111, 41);
-            this.btnSaveNewBill.TabIndex = 78;
+            this.btnSaveNewBill.TabIndex = 9;
             this.btnSaveNewBill.Text = "Save";
             this.btnSaveNewBill.UseVisualStyleBackColor = false;
             this.btnSaveNewBill.Click += new System.EventHandler(this.btnSaveNewBill_Click);
@@ -391,7 +391,7 @@
             this.txtPatientName.Margin = new System.Windows.Forms.Padding(4);
             this.txtPatientName.Name = "txtPatientName";
             this.txtPatientName.Size = new System.Drawing.Size(276, 35);
-            this.txtPatientName.TabIndex = 75;
+            this.txtPatientName.TabIndex = 1;
             // 
             // billing
             // 
