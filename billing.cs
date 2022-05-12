@@ -97,7 +97,6 @@ namespace MedicalSoftware
                 txtPatientId.Clear();
                 txtDateCreated.Clear();
                 txtService.Clear();
-                comboStatus.Items.Clear();
                 txtAmount.Clear();
                 txtNotes.Clear();
                 txtCreatedby.Clear();

@@ -230,6 +230,7 @@
             // 
             // comboStatus
             // 
+            this.comboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboStatus.Font = new System.Drawing.Font("Nirmala UI", 15.75F);
             this.comboStatus.FormattingEnabled = true;
             this.comboStatus.Items.AddRange(new object[] {

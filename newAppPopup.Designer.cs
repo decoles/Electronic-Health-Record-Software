@@ -227,7 +227,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtLastname);
             this.Controls.Add(this.txtFirstname);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "newAppPopup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Appointment";
