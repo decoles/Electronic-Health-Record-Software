@@ -60,7 +60,7 @@
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(217, 27);
-            this.txtId.TabIndex = 2;
+            this.txtId.TabIndex = 1;
             this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // label2
@@ -85,7 +85,7 @@
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(216, 35);
-            this.btnSubmit.TabIndex = 6;
+            this.btnSubmit.TabIndex = 3;
             this.btnSubmit.Text = "Login";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -111,7 +111,7 @@
             this.txtpswd.Name = "txtpswd";
             this.txtpswd.PasswordChar = '•';
             this.txtpswd.Size = new System.Drawing.Size(217, 27);
-            this.txtpswd.TabIndex = 9;
+            this.txtpswd.TabIndex = 2;
             // 
             // button1
             // 
@@ -122,7 +122,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(216, 35);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Exit";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -147,7 +147,7 @@
             this.lblRegister.Location = new System.Drawing.Point(84, 453);
             this.lblRegister.Name = "lblRegister";
             this.lblRegister.Size = new System.Drawing.Size(104, 20);
-            this.lblRegister.TabIndex = 14;
+            this.lblRegister.TabIndex = 5;
             this.lblRegister.Text = "Register Now";
             this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
             // 

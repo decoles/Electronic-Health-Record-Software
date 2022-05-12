@@ -57,6 +57,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Monday = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelSchedule.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -138,6 +139,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblError);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.txtTime);
@@ -229,7 +231,10 @@
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(217, 27);
             this.txtDate.TabIndex = 36;
+            this.txtDate.Text = "00/00/xxxx";
+            this.txtDate.Click += new System.EventHandler(this.txtDate_Click);
             this.txtDate.TextChanged += new System.EventHandler(this.txtDate_TextChanged);
+            this.txtDate.Leave += new System.EventHandler(this.txtDate_Leave);
             // 
             // label10
             // 
@@ -392,6 +397,18 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Sunday";
             // 
+            // lblError
+            // 
+            this.lblError.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblError.Location = new System.Drawing.Point(97, 352);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(183, 21);
+            this.lblError.TabIndex = 42;
+            this.lblError.Text = "USE 12/30/xxxx FORMAT";
+            // 
             // schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,5 +458,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblMonth;
+        private System.Windows.Forms.Label lblError;
     }
 }

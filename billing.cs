@@ -30,7 +30,8 @@ namespace MedicalSoftware
             if (txtSearch.Text != "")
             {
                 SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\primaryDB.db");
-                string query = "SELECT * from Billing WHERE Patient ='" + txtSearch + "' ";
+                string query = "SELECT * from Billing WHERE Patient LIKE '" + txtSearch.Text + "' OR Amount LIKE '" + txtSearch.Text + "' OR Status LIKE '" + txtSearch.Text + "' ";
+                MessageBox.Show(query.ToString());
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 DataTable dt = new DataTable();
                 SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
@@ -63,7 +64,7 @@ namespace MedicalSoftware
             gridpatients.DataSource = dt;
             conn.Close();
             adapter.Dispose();
-            txtCreatedby.Text = Global.globalFirstName + Global.globalLastName;
+            txtCreatedby.Text = Global.globalFirstName + " " + Global.globalLastName;
         }
         private void billing_Load(object sender, EventArgs e)
         {
@@ -72,9 +73,10 @@ namespace MedicalSoftware
         private const string ConnectionString = @"Data Source=.\primaryDB.db";
         private void btnSaveNewBill_Click(object sender, EventArgs e)
         {
-            int tointswap = Convert.ToInt32(txtPatientId.Text);
+            
             try
             {
+                int tointswap = Convert.ToInt32(txtPatientId.Text);
                 SQLiteConnection conn = new SQLiteConnection(ConnectionString);
                 conn.Open();
                 string sqlquery = "INSERT INTO Billing(Patient, DateCreated, ServiceProvider, Status, Amount, Notes, CreatedBy, PatientId) values (?,?,?,?,?,?,?,?)";
@@ -110,6 +112,16 @@ namespace MedicalSoftware
         }
 
         private void comboStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCreatedby_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
 
         }

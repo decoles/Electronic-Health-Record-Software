@@ -37,6 +37,7 @@ namespace MedicalSoftware
 
             //dataGridView1.DataSource = dt;
             displayDays();
+            lblError.Hide();
             //MessageBox.Show(teststring);
             
         }
@@ -165,6 +166,15 @@ namespace MedicalSoftware
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtDate_Leave(object sender, EventArgs e)
+        {
+        }
+
+        private void txtDate_Click(object sender, EventArgs e)
+        {
+            txtDate.Clear();
         }
 
         private void btnNext_Click(object sender, EventArgs e)

@@ -66,7 +66,7 @@
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(216, 35);
-            this.btnClear.TabIndex = 21;
+            this.btnClear.TabIndex = 7;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -92,7 +92,7 @@
             this.txtpswd.Name = "txtpswd";
             this.txtpswd.PasswordChar = '•';
             this.txtpswd.Size = new System.Drawing.Size(217, 27);
-            this.txtpswd.TabIndex = 19;
+            this.txtpswd.TabIndex = 2;
             // 
             // btnRegister
             // 
@@ -103,7 +103,7 @@
             this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(216, 35);
-            this.btnRegister.TabIndex = 18;
+            this.btnRegister.TabIndex = 6;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -128,7 +128,7 @@
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(217, 27);
-            this.txtId.TabIndex = 16;
+            this.txtId.TabIndex = 1;
             // 
             // label1
             // 
@@ -163,7 +163,7 @@
             this.txtFirName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirName.Name = "txtFirName";
             this.txtFirName.Size = new System.Drawing.Size(217, 27);
-            this.txtFirName.TabIndex = 26;
+            this.txtFirName.TabIndex = 4;
             // 
             // label7
             // 
@@ -186,7 +186,7 @@
             this.txtpwdredo.Name = "txtpwdredo";
             this.txtpwdredo.PasswordChar = '•';
             this.txtpwdredo.Size = new System.Drawing.Size(217, 27);
-            this.txtpwdredo.TabIndex = 24;
+            this.txtpwdredo.TabIndex = 3;
             // 
             // label4
             // 
@@ -208,7 +208,7 @@
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(217, 27);
-            this.txtLastName.TabIndex = 28;
+            this.txtLastName.TabIndex = 5;
             // 
             // Register
             // 
