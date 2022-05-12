@@ -279,6 +279,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "home";
             this.Text = "home";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.home_FormClosing);
             this.Load += new System.EventHandler(this.home_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

@@ -107,7 +107,7 @@ namespace MedicalSoftware
             conn.Close();
 
             conn = new SQLiteConnection(@"Data Source=.\primaryDB.db");
-            query = "SELECT PatientId, Temperature, BloodPressure, Spo2, pain, LevelofAwareness, Notes, Height, Weight from Vitals WHERE PatientId = '" + value + "'";
+            query = "SELECT PatientId, Temperature, BloodPresure, Spo2, pain, LevelofAwareness, Notes, Height, Weight from Vitals WHERE PatientId = '" + value + "'";
             cmd = new SQLiteCommand(query, conn);
             dt = new DataTable();
             adapter = new SQLiteDataAdapter(cmd);
