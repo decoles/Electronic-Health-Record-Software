@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace MedicalSoftware
 {
@@ -16,7 +17,7 @@ namespace MedicalSoftware
         {
             InitializeComponent();
         }
-
+        public string value = "";
         private void tabPage8_Click(object sender, EventArgs e)
         {
 
@@ -42,11 +43,164 @@ namespace MedicalSoftware
             Random random = new Random();
             txtPatientId.Text = random.Next(00000, 99999).ToString();
         }
+        private void refreshdata()
+        {
+            
+            SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\primaryDB.db");
+            string query = "SELECT Id, Firstname, Lastname from Patients WHERE Firstname NOT NULL";
+            SQLiteCommand cmd = new SQLiteCommand(query, conn);
+            DataTable dt = new DataTable();
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+            adapter.Fill(dt);
+
+            gridpatients.DataSource = dt;
+            adapter.Dispose();
+        }
 
         private void addPatient_Load(object sender, EventArgs e)
         {
             Random random = new Random();
             txtPatientId.Text = random.Next(00000, 99999).ToString();
+            refreshdata();
+        }
+
+        private void btnMedClear_Click(object sender, EventArgs e)
+        {
+            txtMedFirst.Clear();
+            txtMedLast.Clear();
+            txtMedID.Clear();
+            txtMedMedication.Clear();
+            txtMedDosage.Clear();
+            txtMedNotes.Clear();
+        }
+
+        private void bntMedSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDiagClear_Click(object sender, EventArgs e)
+        {
+            txtPatientId.Clear();
+            txtDiagIssue.Clear();
+            txtMedDosage.Clear();
+            txtDiagNotes.Clear();
+        }
+
+        private void btnVitalClear_Click(object sender, EventArgs e)
+        {
+            txtVitalId.Clear();
+            txtVitaTemp.Clear();
+            txtVitaBP.Clear();
+            txtVitaSPO.Clear();
+            txtVitalPain.Clear();
+            txtVitaNote.Clear();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtFirstname.Clear();
+            txtLastname.Clear();
+            txtphone.Clear();
+            comboGender.Items.Clear();
+            txtbirthday.Clear();
+            txtaddress.Clear();
+            txtstate.Clear();
+            txtzip.Clear();
+            txtssn.Clear();
+            textBox1.Clear();
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private const string ConnectionString = @"Data Source=.\primaryDB.db";
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            int tointswap = Convert.ToInt32(txtPatientId.Text);
+            try
+            {
+                SQLiteConnection conn = new SQLiteConnection(ConnectionString);
+                conn.Open();
+                string sqlquery = "INSERT INTO Patients(Firstname, Lastname, Address, State, Zipcode, Birthdate, SSN, Phone, Gender, Email) values (?,?,?,?,?,?,?,?,?,?)";
+                SQLiteCommand cmd = conn.CreateCommand();
+                cmd.CommandText = sqlquery;
+                cmd.Parameters.AddWithValue("Firstname", txtFirstname.Text);
+                cmd.Parameters.AddWithValue("Lastname", txtLastname.Text);
+                cmd.Parameters.AddWithValue("Address", txtaddress.Text);
+                cmd.Parameters.AddWithValue("State", txtstate.Text);
+                cmd.Parameters.AddWithValue("Zipcode", txtzip.Text);
+                cmd.Parameters.AddWithValue("Birthdate", txtbirthday.Text);
+                cmd.Parameters.AddWithValue("SSN", txtssn.Text);
+                cmd.Parameters.AddWithValue("Phone", txtphone.Text);
+                cmd.Parameters.AddWithValue("Gender", comboGender.GetItemText(comboGender.SelectedItem));
+                cmd.Parameters.AddWithValue("Email", textBox1.Text);
+
+
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("DEBUG UPLOAD OK RELOADING BELOW");
+                conn.Close();
+                txtFirstname.Clear();
+                txtLastname.Clear();
+                txtphone.Clear();
+                comboGender.Items.Clear();
+                txtbirthday.Clear();
+                txtaddress.Clear();
+                txtstate.Clear();
+                txtzip.Clear();
+                txtssn.Clear();
+                textBox1.Clear();
+                refreshdata();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            this.gridpatients.Update();
+        }
+        
+        private void gridpatients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            value = gridpatients.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+            SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\primaryDB.db");
+            SQLiteCommand cmd = new SQLiteCommand();
+            //ON LOGIN GET LAST NAME AND USERNAME AS THAT WILL BE UNIQUE
+            conn.Open();
+            string query = "SELECT * FROM Patients WHERE Id = '" + value + "'";
+            cmd = new SQLiteCommand(query, conn);
+            SQLiteDataReader dataReader = cmd.ExecuteReader();
+            if (dataReader.Read())
+            {
+                txtPatientId.Text = dataReader[0].ToString();
+                txtDiagID.Text = dataReader[0].ToString();
+                txtMedID.Text = dataReader[0].ToString();
+                txtVitalId.Text = dataReader[0].ToString();
+                txtAllergyId.Text = dataReader[0].ToString();
+                txtFirstname.Text  = dataReader[1].ToString();
+                txtLastname.Text = dataReader[2].ToString();
+                txtphone.Text = dataReader[8].ToString();
+                comboGender.SelectedValue = dataReader[9].ToString();
+                txtbirthday.Text = dataReader[6].ToString();
+                txtaddress.Text = dataReader[3].ToString();
+                txtstate.Text  = dataReader[4].ToString();
+                txtzip.Text = dataReader[5].ToString(); 
+                txtssn.Text = dataReader[7].ToString();
+                textBox1.Text = dataReader[10].ToString();
+                dataReader.Close();
+            }
+            else
+            {
+                MessageBox.Show("INVALID USERNAME OR PASSWORD");
+            }
+            conn.Close();
+            dataReader.Close ();
+            //REST OF PARTS
+            //ON LOGIN GET LAST NAME AND USERNAME AS THAT WILL BE UNIQUE
+
         }
     }
 }

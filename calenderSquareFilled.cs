@@ -46,6 +46,7 @@ namespace MedicalSoftware
                 MessageBox.Show("NULL");
             }
             dataGridView1.DataSource = dt;
+            adapter.Dispose();
             
             //cmd.Parameters.AddWithValue("Date", schedule.static_month + "/" + lblDay.Text + "/" + schedule.static_year);
 

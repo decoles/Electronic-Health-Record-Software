@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label15 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label10 = new System.Windows.Forms.Label();
@@ -39,10 +39,13 @@
             this.txtLastname = new System.Windows.Forms.TextBox();
             this.txtFirstname = new System.Windows.Forms.TextBox();
             this.txtemail = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtPatientId = new System.Windows.Forms.TextBox();
             this.comboGender = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtstate = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,9 +61,6 @@
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridpatients = new System.Windows.Forms.DataGridView();
-            this.columnFirst = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnLast = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientIdColum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.txtMedID = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnMedSave = new System.Windows.Forms.Button();
+            this.btnMedClear = new System.Windows.Forms.Button();
             this.bntMedSave = new System.Windows.Forms.Button();
             this.txtMedFirst = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -111,15 +111,28 @@
             this.btnDiagClear = new System.Windows.Forms.Button();
             this.btnDiagSave = new System.Windows.Forms.Button();
             this.txtDiagIssue = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.txtPatientId = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.txtDrugAllergies = new System.Windows.Forms.TextBox();
+            this.txtAllergyId = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnAllergiesSave = new System.Windows.Forms.Button();
+            this.txtFoodAllergies = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.txtVitalWeight = new System.Windows.Forms.TextBox();
+            this.txtVitalHeight = new System.Windows.Forms.TextBox();
             this.txtemail.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridpatients)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label15
@@ -171,6 +184,7 @@
             this.btnSave.TabIndex = 45;
             this.btnSave.Text = "Save New Patient";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtLastname
             // 
@@ -196,13 +210,13 @@
             // 
             this.txtemail.BackColor = System.Drawing.Color.White;
             this.txtemail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtemail.Controls.Add(this.textBox1);
             this.txtemail.Controls.Add(this.button1);
             this.txtemail.Controls.Add(this.label34);
             this.txtemail.Controls.Add(this.txtPatientId);
             this.txtemail.Controls.Add(this.comboGender);
             this.txtemail.Controls.Add(this.label14);
             this.txtemail.Controls.Add(this.txtstate);
-            this.txtemail.Controls.Add(this.textBox7);
             this.txtemail.Controls.Add(this.label9);
             this.txtemail.Controls.Add(this.btnClear);
             this.txtemail.Controls.Add(this.label7);
@@ -225,6 +239,51 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(1243, 249);
             this.txtemail.TabIndex = 53;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
+            this.textBox1.Location = new System.Drawing.Point(25, 176);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(217, 27);
+            this.textBox1.TabIndex = 69;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(1024, 172);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 35);
+            this.button1.TabIndex = 68;
+            this.button1.Text = "Generate New Id";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label34
+            // 
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(832, 83);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(74, 21);
+            this.label34.TabIndex = 67;
+            this.label34.Text = "Patient Id";
+            // 
+            // txtPatientId
+            // 
+            this.txtPatientId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtPatientId.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
+            this.txtPatientId.Location = new System.Drawing.Point(835, 108);
+            this.txtPatientId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPatientId.Name = "txtPatientId";
+            this.txtPatientId.Size = new System.Drawing.Size(217, 27);
+            this.txtPatientId.TabIndex = 66;
             // 
             // comboGender
             // 
@@ -259,16 +318,6 @@
             this.txtstate.Size = new System.Drawing.Size(90, 27);
             this.txtstate.TabIndex = 62;
             // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox7.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
-            this.textBox7.Location = new System.Drawing.Point(27, 176);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(217, 27);
-            this.textBox7.TabIndex = 60;
-            // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -293,6 +342,7 @@
             this.btnClear.TabIndex = 59;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label7
             // 
@@ -427,31 +477,27 @@
             this.gridpatients.AllowUserToDeleteRows = false;
             this.gridpatients.AllowUserToResizeColumns = false;
             this.gridpatients.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridpatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridpatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridpatients.BackgroundColor = System.Drawing.Color.White;
             this.gridpatients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridpatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridpatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridpatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridpatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnFirst,
-            this.columnLast,
-            this.patientIdColum});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridpatients.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridpatients.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridpatients.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.gridpatients.Location = new System.Drawing.Point(8, 55);
             this.gridpatients.MultiSelect = false;
@@ -462,24 +508,7 @@
             this.gridpatients.ShowEditingIcon = false;
             this.gridpatients.Size = new System.Drawing.Size(362, 165);
             this.gridpatients.TabIndex = 55;
-            // 
-            // columnFirst
-            // 
-            this.columnFirst.HeaderText = "First Name";
-            this.columnFirst.Name = "columnFirst";
-            this.columnFirst.ReadOnly = true;
-            // 
-            // columnLast
-            // 
-            this.columnLast.HeaderText = "Last Name";
-            this.columnLast.Name = "columnLast";
-            this.columnLast.ReadOnly = true;
-            // 
-            // patientIdColum
-            // 
-            this.patientIdColum.HeaderText = "Patient ID";
-            this.patientIdColum.Name = "patientIdColum";
-            this.patientIdColum.ReadOnly = true;
+            this.gridpatients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridpatients_CellContentClick);
             // 
             // label8
             // 
@@ -505,7 +534,7 @@
             this.panel3.Controls.Add(this.label23);
             this.panel3.Controls.Add(this.txtMedID);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.btnMedSave);
+            this.panel3.Controls.Add(this.btnMedClear);
             this.panel3.Controls.Add(this.bntMedSave);
             this.panel3.Controls.Add(this.txtMedFirst);
             this.panel3.Controls.Add(this.label21);
@@ -622,18 +651,19 @@
             this.label12.TabIndex = 61;
             this.label12.Text = "Patient ID (if applicable)";
             // 
-            // btnMedSave
+            // btnMedClear
             // 
-            this.btnMedSave.BackColor = System.Drawing.SystemColors.Control;
-            this.btnMedSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMedSave.ForeColor = System.Drawing.Color.Black;
-            this.btnMedSave.Location = new System.Drawing.Point(547, 123);
-            this.btnMedSave.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMedSave.Name = "btnMedSave";
-            this.btnMedSave.Size = new System.Drawing.Size(95, 35);
-            this.btnMedSave.TabIndex = 59;
-            this.btnMedSave.Text = "Clear";
-            this.btnMedSave.UseVisualStyleBackColor = false;
+            this.btnMedClear.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMedClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMedClear.ForeColor = System.Drawing.Color.Black;
+            this.btnMedClear.Location = new System.Drawing.Point(547, 123);
+            this.btnMedClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMedClear.Name = "btnMedClear";
+            this.btnMedClear.Size = new System.Drawing.Size(95, 35);
+            this.btnMedClear.TabIndex = 59;
+            this.btnMedClear.Text = "Clear";
+            this.btnMedClear.UseVisualStyleBackColor = false;
+            this.btnMedClear.Click += new System.EventHandler(this.btnMedClear_Click);
             // 
             // bntMedSave
             // 
@@ -647,6 +677,7 @@
             this.bntMedSave.TabIndex = 45;
             this.bntMedSave.Text = "Save";
             this.bntMedSave.UseVisualStyleBackColor = false;
+            this.bntMedSave.Click += new System.EventHandler(this.bntMedSave_Click);
             // 
             // txtMedFirst
             // 
@@ -694,6 +725,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label35);
+            this.panel4.Controls.Add(this.label36);
+            this.panel4.Controls.Add(this.txtVitalWeight);
+            this.panel4.Controls.Add(this.txtVitalHeight);
             this.panel4.Controls.Add(this.label29);
             this.panel4.Controls.Add(this.comboLOV);
             this.panel4.Controls.Add(this.label33);
@@ -714,7 +749,7 @@
             this.panel4.Controls.Add(this.txtVitaTemp);
             this.panel4.Location = new System.Drawing.Point(721, 342);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(667, 323);
+            this.panel4.Size = new System.Drawing.Size(858, 323);
             this.panel4.TabIndex = 69;
             // 
             // label29
@@ -871,20 +906,21 @@
             this.btnVitalClear.BackColor = System.Drawing.SystemColors.Control;
             this.btnVitalClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVitalClear.ForeColor = System.Drawing.Color.Black;
-            this.btnVitalClear.Location = new System.Drawing.Point(547, 123);
+            this.btnVitalClear.Location = new System.Drawing.Point(741, 259);
             this.btnVitalClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnVitalClear.Name = "btnVitalClear";
             this.btnVitalClear.Size = new System.Drawing.Size(95, 35);
             this.btnVitalClear.TabIndex = 59;
             this.btnVitalClear.Text = "Clear";
             this.btnVitalClear.UseVisualStyleBackColor = false;
+            this.btnVitalClear.Click += new System.EventHandler(this.btnVitalClear_Click);
             // 
             // btnVitalSave
             // 
             this.btnVitalSave.BackColor = System.Drawing.SystemColors.Control;
             this.btnVitalSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVitalSave.ForeColor = System.Drawing.Color.Black;
-            this.btnVitalSave.Location = new System.Drawing.Point(547, 55);
+            this.btnVitalSave.Location = new System.Drawing.Point(741, 201);
             this.btnVitalSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnVitalSave.Name = "btnVitalSave";
             this.btnVitalSave.Size = new System.Drawing.Size(95, 35);
@@ -907,7 +943,7 @@
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(279, 207);
+            this.label28.Location = new System.Drawing.Point(375, 207);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(84, 21);
             this.label28.TabIndex = 46;
@@ -1051,6 +1087,7 @@
             this.btnDiagClear.TabIndex = 59;
             this.btnDiagClear.Text = "Clear";
             this.btnDiagClear.UseVisualStyleBackColor = false;
+            this.btnDiagClear.Click += new System.EventHandler(this.btnDiagClear_Click);
             // 
             // btnDiagSave
             // 
@@ -1075,46 +1112,182 @@
             this.txtDiagIssue.Size = new System.Drawing.Size(217, 27);
             this.txtDiagIssue.TabIndex = 42;
             // 
-            // label34
+            // panel6
             // 
-            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(832, 83);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(74, 21);
-            this.label34.TabIndex = 67;
-            this.label34.Text = "Patient Id";
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label44);
+            this.panel6.Controls.Add(this.label45);
+            this.panel6.Controls.Add(this.label46);
+            this.panel6.Controls.Add(this.txtDrugAllergies);
+            this.panel6.Controls.Add(this.txtAllergyId);
+            this.panel6.Controls.Add(this.label48);
+            this.panel6.Controls.Add(this.textBox11);
+            this.panel6.Controls.Add(this.button4);
+            this.panel6.Controls.Add(this.btnAllergiesSave);
+            this.panel6.Controls.Add(this.txtFoodAllergies);
+            this.panel6.Location = new System.Drawing.Point(721, 702);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(667, 209);
+            this.panel6.TabIndex = 76;
             // 
-            // txtPatientId
+            // label44
             // 
-            this.txtPatientId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtPatientId.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
-            this.txtPatientId.Location = new System.Drawing.Point(835, 108);
-            this.txtPatientId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPatientId.Name = "txtPatientId";
-            this.txtPatientId.Size = new System.Drawing.Size(217, 27);
-            this.txtPatientId.TabIndex = 66;
+            this.label44.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(286, 57);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(109, 21);
+            this.label44.TabIndex = 75;
+            this.label44.Text = "Food Allergies";
             // 
-            // button1
+            // label45
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1024, 172);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 35);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "Generate New Id";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label45.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(24, 57);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(70, 21);
+            this.label45.TabIndex = 74;
+            this.label45.Text = "PatientId";
+            // 
+            // label46
+            // 
+            this.label46.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label46.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(21, 5);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(137, 43);
+            this.label46.TabIndex = 69;
+            this.label46.Text = "Allergies";
+            // 
+            // txtDrugAllergies
+            // 
+            this.txtDrugAllergies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtDrugAllergies.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
+            this.txtDrugAllergies.Location = new System.Drawing.Point(28, 150);
+            this.txtDrugAllergies.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDrugAllergies.Name = "txtDrugAllergies";
+            this.txtDrugAllergies.Size = new System.Drawing.Size(217, 27);
+            this.txtDrugAllergies.TabIndex = 70;
+            // 
+            // txtAllergyId
+            // 
+            this.txtAllergyId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtAllergyId.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
+            this.txtAllergyId.Location = new System.Drawing.Point(27, 82);
+            this.txtAllergyId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAllergyId.Name = "txtAllergyId";
+            this.txtAllergyId.Size = new System.Drawing.Size(217, 27);
+            this.txtAllergyId.TabIndex = 62;
+            // 
+            // label48
+            // 
+            this.label48.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(23, 125);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(109, 21);
+            this.label48.TabIndex = 71;
+            this.label48.Text = "Drug Allergies";
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBox11.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
+            this.textBox11.Location = new System.Drawing.Point(28, 263);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(217, 27);
+            this.textBox11.TabIndex = 60;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Control;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(547, 142);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(95, 35);
+            this.button4.TabIndex = 59;
+            this.button4.Text = "Clear";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // btnAllergiesSave
+            // 
+            this.btnAllergiesSave.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAllergiesSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllergiesSave.ForeColor = System.Drawing.Color.Black;
+            this.btnAllergiesSave.Location = new System.Drawing.Point(547, 68);
+            this.btnAllergiesSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAllergiesSave.Name = "btnAllergiesSave";
+            this.btnAllergiesSave.Size = new System.Drawing.Size(95, 35);
+            this.btnAllergiesSave.TabIndex = 45;
+            this.btnAllergiesSave.Text = "Save";
+            this.btnAllergiesSave.UseVisualStyleBackColor = false;
+            // 
+            // txtFoodAllergies
+            // 
+            this.txtFoodAllergies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtFoodAllergies.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
+            this.txtFoodAllergies.Location = new System.Drawing.Point(289, 82);
+            this.txtFoodAllergies.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFoodAllergies.Name = "txtFoodAllergies";
+            this.txtFoodAllergies.Size = new System.Drawing.Size(217, 27);
+            this.txtFoodAllergies.TabIndex = 42;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(511, 98);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(56, 21);
+            this.label35.TabIndex = 86;
+            this.label35.Text = "Height";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(511, 30);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(60, 21);
+            this.label36.TabIndex = 85;
+            this.label36.Text = "Weight";
+            // 
+            // txtVitalWeight
+            // 
+            this.txtVitalWeight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtVitalWeight.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
+            this.txtVitalWeight.Location = new System.Drawing.Point(510, 55);
+            this.txtVitalWeight.Margin = new System.Windows.Forms.Padding(4);
+            this.txtVitalWeight.Name = "txtVitalWeight";
+            this.txtVitalWeight.Size = new System.Drawing.Size(217, 27);
+            this.txtVitalWeight.TabIndex = 83;
+            // 
+            // txtVitalHeight
+            // 
+            this.txtVitalHeight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtVitalHeight.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
+            this.txtVitalHeight.Location = new System.Drawing.Point(510, 123);
+            this.txtVitalHeight.Margin = new System.Windows.Forms.Padding(4);
+            this.txtVitalHeight.Name = "txtVitalHeight";
+            this.txtVitalHeight.Size = new System.Drawing.Size(217, 27);
+            this.txtVitalHeight.TabIndex = 84;
             // 
             // addPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1684, 961);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -1134,6 +1307,8 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1149,7 +1324,6 @@
         private System.Windows.Forms.Panel txtemail;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtstate;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label7;
@@ -1170,16 +1344,13 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtMedID;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnMedSave;
+        private System.Windows.Forms.Button btnMedClear;
         private System.Windows.Forms.Button bntMedSave;
         private System.Windows.Forms.TextBox txtMedFirst;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtMedLast;
         private System.Windows.Forms.DataGridView gridpatients;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnFirst;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnLast;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientIdColum;
         private System.Windows.Forms.TextBox txtMedDosage;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtMedMedication;
@@ -1222,5 +1393,21 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox txtPatientId;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox txtDrugAllergies;
+        private System.Windows.Forms.TextBox txtAllergyId;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAllergiesSave;
+        private System.Windows.Forms.TextBox txtFoodAllergies;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox txtVitalWeight;
+        private System.Windows.Forms.TextBox txtVitalHeight;
     }
 }

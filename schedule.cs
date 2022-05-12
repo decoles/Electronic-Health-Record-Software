@@ -132,6 +132,7 @@ namespace MedicalSoftware
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             SQLiteConnection conn = new SQLiteConnection(ConnectionString);
             conn.Open();
             string sqlquery = "INSERT INTO Appointments(Firstname, Lastname, Date, Reason, Time) values (?,?,?,?,?)";
@@ -144,17 +145,24 @@ namespace MedicalSoftware
             cmd.Parameters.AddWithValue("Time", txtTime.Text);
 
             cmd.ExecuteNonQuery();
-            MessageBox.Show("DEBUG UPLOAD OK");
+
+            MessageBox.Show("DEBUG UPLOAD OK RELOADING BELOW");
             conn.Close();
             txtFirstname.Clear();
             txtLastname.Clear();
             txtReason.Clear();
             txtDate.Clear();    
-            txtTime.Clear();    
-            this.Refresh();
+            txtTime.Clear();
+            panelCalender.Controls.Clear();
+            displayDays();
         }
 
         private void txtDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

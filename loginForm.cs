@@ -19,9 +19,6 @@ namespace MedicalSoftware
         {
             InitializeComponent();
         }
-        SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\primaryDB.db");
-        SQLiteCommand cmd = new SQLiteCommand();
-        SQLiteDataAdapter adapter = new SQLiteDataAdapter();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -50,6 +47,8 @@ namespace MedicalSoftware
             }
             else
             {
+                SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\primaryDB.db");
+                SQLiteCommand cmd = new SQLiteCommand();
                 //ON LOGIN GET LAST NAME AND USERNAME AS THAT WILL BE UNIQUE
                 conn.Open();
                 string query = "SELECT * FROM Staff WHERE Username = '" +txtId.Text + "' and Password= '"+txtpswd.Text+"'";
@@ -62,12 +61,14 @@ namespace MedicalSoftware
                     home homefrm = new home();
                     homefrm.Show();
                     this.Hide();
+                    dataReader.Close();
                 }
                 else
                 {
                     MessageBox.Show("INVALID USERNAME OR PASSWORD");
                 }
                 conn.Close();
+                
 
             }
 

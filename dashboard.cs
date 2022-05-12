@@ -21,13 +21,14 @@ namespace MedicalSoftware
         private void dashboard_Load(object sender, EventArgs e)
         {
             SQLiteConnection conn = new SQLiteConnection(ConnectionString);
-            string query = "SELECT FirstName from Appointments";
+            string query = "SELECT LastName, Time from Appointments";
             SQLiteCommand cmd = new SQLiteCommand(query, conn);
             DataTable dt = new DataTable();
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
             adapter.Fill(dt);
 
             dataGridAppointment.DataSource = dt;
+            adapter.Dispose();
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -46,6 +47,11 @@ namespace MedicalSoftware
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
         {
 
         }

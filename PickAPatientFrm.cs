@@ -22,26 +22,33 @@ namespace MedicalSoftware
         {
                   
         Global.currentPatient = "";
-            SQLiteConnection conn = new SQLiteConnection(ConnectionString);
-        string query = "SELECT Id, Firstname, Lastname FROM Patients";
+        SQLiteConnection conn = new SQLiteConnection(ConnectionString);
+        string query = "SELECT Id, Firstname, Lastname FROM Patients WHERE Firstname NOT NULL";
         SQLiteCommand cmd = new SQLiteCommand(query, conn);
         DataTable dt = new DataTable();
         SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
         adapter.Fill(dt);
 
             gridpatients.DataSource = dt;
+            conn.Close();
+            adapter.Dispose();
         }
 
         private void gridpatients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string value = "";
+            value = gridpatients.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+            Global.currentPatient = value;
+            this.Hide();
         }
 
         private void gridpatients_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             string value = "";
             value = gridpatients.Rows[e.RowIndex].Cells["Id"].Value.ToString();
-            MessageBox.Show(value);
+            Global.currentPatient = value;
+            this.Hide();
+           
         }
     }
 }

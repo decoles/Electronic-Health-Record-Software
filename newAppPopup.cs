@@ -59,6 +59,7 @@ namespace MedicalSoftware
             cmd.ExecuteNonQuery();
             MessageBox.Show("DEBUG UPLOAD OK");
             conn.Close();
+            cmd.Dispose();
         }
     }
 }
