@@ -129,5 +129,10 @@ namespace MedicalSoftware
             conn.Close();
 
         }
+
+        private void gridVital_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

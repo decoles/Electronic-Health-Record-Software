@@ -28,33 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label15 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.dataAllergies = new System.Windows.Forms.DataGridView();
             this.label46 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.gridDiag = new System.Windows.Forms.DataGridView();
             this.label19 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.GridMeds = new System.Windows.Forms.DataGridView();
             this.label23 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridpatientsChange = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.Panel();
+            this.lblemail = new System.Windows.Forms.Label();
+            this.lblbirth = new System.Windows.Forms.Label();
+            this.lblssn = new System.Windows.Forms.Label();
+            this.lblzip = new System.Windows.Forms.Label();
+            this.lbllastname = new System.Windows.Forms.Label();
+            this.lblgender = new System.Windows.Forms.Label();
+            this.lblPatientId = new System.Windows.Forms.Label();
+            this.lblState = new System.Windows.Forms.Label();
+            this.lbladdress = new System.Windows.Forms.Label();
+            this.lblphone = new System.Windows.Forms.Label();
+            this.lblfirstname = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -67,33 +81,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblfirstname = new System.Windows.Forms.Label();
-            this.lblphone = new System.Windows.Forms.Label();
-            this.lbladdress = new System.Windows.Forms.Label();
-            this.lblState = new System.Windows.Forms.Label();
-            this.lblPatientId = new System.Windows.Forms.Label();
-            this.lblgender = new System.Windows.Forms.Label();
-            this.lbllastname = new System.Windows.Forms.Label();
-            this.lblzip = new System.Windows.Forms.Label();
-            this.lblssn = new System.Windows.Forms.Label();
-            this.lblbirth = new System.Windows.Forms.Label();
-            this.lblemail = new System.Windows.Forms.Label();
-            this.dataAllergies = new System.Windows.Forms.DataGridView();
             this.gridVital = new System.Windows.Forms.DataGridView();
-            this.gridDiag = new System.Windows.Forms.DataGridView();
-            this.GridMeds = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataAllergies)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDiag)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridMeds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridpatientsChange)).BeginInit();
             this.txtemail.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataAllergies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVital)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDiag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridMeds)).BeginInit();
             this.SuspendLayout();
             // 
             // label15
@@ -118,6 +118,45 @@
             this.panel6.Size = new System.Drawing.Size(813, 322);
             this.panel6.TabIndex = 81;
             // 
+            // dataAllergies
+            // 
+            this.dataAllergies.AllowUserToAddRows = false;
+            this.dataAllergies.AllowUserToDeleteRows = false;
+            this.dataAllergies.AllowUserToResizeColumns = false;
+            this.dataAllergies.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataAllergies.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataAllergies.BackgroundColor = System.Drawing.Color.White;
+            this.dataAllergies.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataAllergies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataAllergies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataAllergies.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataAllergies.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataAllergies.Location = new System.Drawing.Point(27, 67);
+            this.dataAllergies.MultiSelect = false;
+            this.dataAllergies.Name = "dataAllergies";
+            this.dataAllergies.ReadOnly = true;
+            this.dataAllergies.RowHeadersVisible = false;
+            this.dataAllergies.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataAllergies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataAllergies.ShowEditingIcon = false;
+            this.dataAllergies.Size = new System.Drawing.Size(764, 235);
+            this.dataAllergies.TabIndex = 56;
+            // 
             // label46
             // 
             this.label46.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -139,6 +178,45 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(611, 247);
             this.panel5.TabIndex = 80;
+            // 
+            // gridDiag
+            // 
+            this.gridDiag.AllowUserToAddRows = false;
+            this.gridDiag.AllowUserToDeleteRows = false;
+            this.gridDiag.AllowUserToResizeColumns = false;
+            this.gridDiag.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridDiag.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridDiag.BackgroundColor = System.Drawing.Color.White;
+            this.gridDiag.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridDiag.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.gridDiag.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridDiag.DefaultCellStyle = dataGridViewCellStyle6;
+            this.gridDiag.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.gridDiag.Location = new System.Drawing.Point(9, 37);
+            this.gridDiag.MultiSelect = false;
+            this.gridDiag.Name = "gridDiag";
+            this.gridDiag.ReadOnly = true;
+            this.gridDiag.RowHeadersVisible = false;
+            this.gridDiag.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.gridDiag.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridDiag.ShowEditingIcon = false;
+            this.gridDiag.Size = new System.Drawing.Size(591, 189);
+            this.gridDiag.TabIndex = 71;
             // 
             // label19
             // 
@@ -170,6 +248,45 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(813, 323);
             this.panel3.TabIndex = 78;
+            // 
+            // GridMeds
+            // 
+            this.GridMeds.AllowUserToAddRows = false;
+            this.GridMeds.AllowUserToDeleteRows = false;
+            this.GridMeds.AllowUserToResizeColumns = false;
+            this.GridMeds.AllowUserToResizeRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Gainsboro;
+            this.GridMeds.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.GridMeds.BackgroundColor = System.Drawing.Color.White;
+            this.GridMeds.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridMeds.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.GridMeds.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridMeds.DefaultCellStyle = dataGridViewCellStyle9;
+            this.GridMeds.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.GridMeds.Location = new System.Drawing.Point(9, 46);
+            this.GridMeds.MultiSelect = false;
+            this.GridMeds.Name = "GridMeds";
+            this.GridMeds.ReadOnly = true;
+            this.GridMeds.RowHeadersVisible = false;
+            this.GridMeds.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.GridMeds.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridMeds.ShowEditingIcon = false;
+            this.GridMeds.Size = new System.Drawing.Size(775, 257);
+            this.GridMeds.TabIndex = 71;
             // 
             // label23
             // 
@@ -273,6 +390,116 @@
             this.txtemail.Size = new System.Drawing.Size(1209, 249);
             this.txtemail.TabIndex = 82;
             this.txtemail.Paint += new System.Windows.Forms.PaintEventHandler(this.txtemail_Paint);
+            // 
+            // lblemail
+            // 
+            this.lblemail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblemail.AutoSize = true;
+            this.lblemail.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblemail.Location = new System.Drawing.Point(10, 172);
+            this.lblemail.Name = "lblemail";
+            this.lblemail.Size = new System.Drawing.Size(0, 30);
+            this.lblemail.TabIndex = 80;
+            // 
+            // lblbirth
+            // 
+            this.lblbirth.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblbirth.AutoSize = true;
+            this.lblbirth.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbirth.Location = new System.Drawing.Point(263, 172);
+            this.lblbirth.Name = "lblbirth";
+            this.lblbirth.Size = new System.Drawing.Size(0, 30);
+            this.lblbirth.TabIndex = 79;
+            // 
+            // lblssn
+            // 
+            this.lblssn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblssn.AutoSize = true;
+            this.lblssn.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblssn.Location = new System.Drawing.Point(848, 35);
+            this.lblssn.Name = "lblssn";
+            this.lblssn.Size = new System.Drawing.Size(0, 30);
+            this.lblssn.TabIndex = 78;
+            // 
+            // lblzip
+            // 
+            this.lblzip.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblzip.AutoSize = true;
+            this.lblzip.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblzip.Location = new System.Drawing.Point(558, 172);
+            this.lblzip.Name = "lblzip";
+            this.lblzip.Size = new System.Drawing.Size(0, 30);
+            this.lblzip.TabIndex = 77;
+            // 
+            // lbllastname
+            // 
+            this.lbllastname.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbllastname.AutoSize = true;
+            this.lbllastname.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllastname.Location = new System.Drawing.Point(10, 108);
+            this.lbllastname.Name = "lbllastname";
+            this.lbllastname.Size = new System.Drawing.Size(0, 30);
+            this.lbllastname.TabIndex = 76;
+            // 
+            // lblgender
+            // 
+            this.lblgender.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblgender.AutoSize = true;
+            this.lblgender.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblgender.Location = new System.Drawing.Point(263, 108);
+            this.lblgender.Name = "lblgender";
+            this.lblgender.Size = new System.Drawing.Size(0, 30);
+            this.lblgender.TabIndex = 75;
+            // 
+            // lblPatientId
+            // 
+            this.lblPatientId.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblPatientId.AutoSize = true;
+            this.lblPatientId.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPatientId.Location = new System.Drawing.Point(847, 108);
+            this.lblPatientId.Name = "lblPatientId";
+            this.lblPatientId.Size = new System.Drawing.Size(0, 30);
+            this.lblPatientId.TabIndex = 74;
+            // 
+            // lblState
+            // 
+            this.lblState.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblState.AutoSize = true;
+            this.lblState.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblState.Location = new System.Drawing.Point(558, 108);
+            this.lblState.Name = "lblState";
+            this.lblState.Size = new System.Drawing.Size(0, 30);
+            this.lblState.TabIndex = 73;
+            // 
+            // lbladdress
+            // 
+            this.lbladdress.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbladdress.AutoSize = true;
+            this.lbladdress.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbladdress.Location = new System.Drawing.Point(558, 35);
+            this.lbladdress.Name = "lbladdress";
+            this.lbladdress.Size = new System.Drawing.Size(0, 30);
+            this.lbladdress.TabIndex = 72;
+            // 
+            // lblphone
+            // 
+            this.lblphone.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblphone.AutoSize = true;
+            this.lblphone.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblphone.Location = new System.Drawing.Point(263, 35);
+            this.lblphone.Name = "lblphone";
+            this.lblphone.Size = new System.Drawing.Size(0, 30);
+            this.lblphone.TabIndex = 71;
+            // 
+            // lblfirstname
+            // 
+            this.lblfirstname.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblfirstname.AutoSize = true;
+            this.lblfirstname.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfirstname.Location = new System.Drawing.Point(10, 35);
+            this.lblfirstname.Name = "lblfirstname";
+            this.lblfirstname.Size = new System.Drawing.Size(0, 30);
+            this.lblfirstname.TabIndex = 70;
             // 
             // label34
             // 
@@ -406,165 +633,6 @@
             this.panel1.Size = new System.Drawing.Size(1015, 246);
             this.panel1.TabIndex = 82;
             // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(16, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(137, 43);
-            this.label11.TabIndex = 69;
-            this.label11.Text = "Vitals";
-            // 
-            // lblfirstname
-            // 
-            this.lblfirstname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblfirstname.AutoSize = true;
-            this.lblfirstname.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfirstname.Location = new System.Drawing.Point(10, 35);
-            this.lblfirstname.Name = "lblfirstname";
-            this.lblfirstname.Size = new System.Drawing.Size(0, 30);
-            this.lblfirstname.TabIndex = 70;
-            // 
-            // lblphone
-            // 
-            this.lblphone.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblphone.AutoSize = true;
-            this.lblphone.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblphone.Location = new System.Drawing.Point(263, 35);
-            this.lblphone.Name = "lblphone";
-            this.lblphone.Size = new System.Drawing.Size(0, 30);
-            this.lblphone.TabIndex = 71;
-            // 
-            // lbladdress
-            // 
-            this.lbladdress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbladdress.AutoSize = true;
-            this.lbladdress.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladdress.Location = new System.Drawing.Point(558, 35);
-            this.lbladdress.Name = "lbladdress";
-            this.lbladdress.Size = new System.Drawing.Size(0, 30);
-            this.lbladdress.TabIndex = 72;
-            // 
-            // lblState
-            // 
-            this.lblState.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblState.AutoSize = true;
-            this.lblState.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblState.Location = new System.Drawing.Point(558, 108);
-            this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(0, 30);
-            this.lblState.TabIndex = 73;
-            // 
-            // lblPatientId
-            // 
-            this.lblPatientId.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblPatientId.AutoSize = true;
-            this.lblPatientId.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPatientId.Location = new System.Drawing.Point(847, 108);
-            this.lblPatientId.Name = "lblPatientId";
-            this.lblPatientId.Size = new System.Drawing.Size(0, 30);
-            this.lblPatientId.TabIndex = 74;
-            // 
-            // lblgender
-            // 
-            this.lblgender.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblgender.AutoSize = true;
-            this.lblgender.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblgender.Location = new System.Drawing.Point(263, 108);
-            this.lblgender.Name = "lblgender";
-            this.lblgender.Size = new System.Drawing.Size(0, 30);
-            this.lblgender.TabIndex = 75;
-            // 
-            // lbllastname
-            // 
-            this.lbllastname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbllastname.AutoSize = true;
-            this.lbllastname.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllastname.Location = new System.Drawing.Point(10, 108);
-            this.lbllastname.Name = "lbllastname";
-            this.lbllastname.Size = new System.Drawing.Size(0, 30);
-            this.lbllastname.TabIndex = 76;
-            // 
-            // lblzip
-            // 
-            this.lblzip.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblzip.AutoSize = true;
-            this.lblzip.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblzip.Location = new System.Drawing.Point(558, 172);
-            this.lblzip.Name = "lblzip";
-            this.lblzip.Size = new System.Drawing.Size(0, 30);
-            this.lblzip.TabIndex = 77;
-            // 
-            // lblssn
-            // 
-            this.lblssn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblssn.AutoSize = true;
-            this.lblssn.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblssn.Location = new System.Drawing.Point(848, 35);
-            this.lblssn.Name = "lblssn";
-            this.lblssn.Size = new System.Drawing.Size(0, 30);
-            this.lblssn.TabIndex = 78;
-            // 
-            // lblbirth
-            // 
-            this.lblbirth.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblbirth.AutoSize = true;
-            this.lblbirth.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbirth.Location = new System.Drawing.Point(263, 172);
-            this.lblbirth.Name = "lblbirth";
-            this.lblbirth.Size = new System.Drawing.Size(0, 30);
-            this.lblbirth.TabIndex = 79;
-            // 
-            // lblemail
-            // 
-            this.lblemail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblemail.AutoSize = true;
-            this.lblemail.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemail.Location = new System.Drawing.Point(10, 172);
-            this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(0, 30);
-            this.lblemail.TabIndex = 80;
-            // 
-            // dataAllergies
-            // 
-            this.dataAllergies.AllowUserToAddRows = false;
-            this.dataAllergies.AllowUserToDeleteRows = false;
-            this.dataAllergies.AllowUserToResizeColumns = false;
-            this.dataAllergies.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataAllergies.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataAllergies.BackgroundColor = System.Drawing.Color.White;
-            this.dataAllergies.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataAllergies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataAllergies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataAllergies.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataAllergies.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataAllergies.Location = new System.Drawing.Point(27, 67);
-            this.dataAllergies.MultiSelect = false;
-            this.dataAllergies.Name = "dataAllergies";
-            this.dataAllergies.ReadOnly = true;
-            this.dataAllergies.RowHeadersVisible = false;
-            this.dataAllergies.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataAllergies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataAllergies.ShowEditingIcon = false;
-            this.dataAllergies.Size = new System.Drawing.Size(764, 235);
-            this.dataAllergies.TabIndex = 56;
-            // 
             // gridVital
             // 
             this.gridVital.AllowUserToAddRows = false;
@@ -603,84 +671,17 @@
             this.gridVital.ShowEditingIcon = false;
             this.gridVital.Size = new System.Drawing.Size(984, 189);
             this.gridVital.TabIndex = 70;
+            this.gridVital.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridVital_CellContentClick);
             // 
-            // gridDiag
+            // label11
             // 
-            this.gridDiag.AllowUserToAddRows = false;
-            this.gridDiag.AllowUserToDeleteRows = false;
-            this.gridDiag.AllowUserToResizeColumns = false;
-            this.gridDiag.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridDiag.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridDiag.BackgroundColor = System.Drawing.Color.White;
-            this.gridDiag.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridDiag.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.gridDiag.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridDiag.DefaultCellStyle = dataGridViewCellStyle6;
-            this.gridDiag.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.gridDiag.Location = new System.Drawing.Point(9, 37);
-            this.gridDiag.MultiSelect = false;
-            this.gridDiag.Name = "gridDiag";
-            this.gridDiag.ReadOnly = true;
-            this.gridDiag.RowHeadersVisible = false;
-            this.gridDiag.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.gridDiag.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridDiag.ShowEditingIcon = false;
-            this.gridDiag.Size = new System.Drawing.Size(591, 189);
-            this.gridDiag.TabIndex = 71;
-            // 
-            // GridMeds
-            // 
-            this.GridMeds.AllowUserToAddRows = false;
-            this.GridMeds.AllowUserToDeleteRows = false;
-            this.GridMeds.AllowUserToResizeColumns = false;
-            this.GridMeds.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Gainsboro;
-            this.GridMeds.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.GridMeds.BackgroundColor = System.Drawing.Color.White;
-            this.GridMeds.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(63)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridMeds.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.GridMeds.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridMeds.DefaultCellStyle = dataGridViewCellStyle9;
-            this.GridMeds.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.GridMeds.Location = new System.Drawing.Point(9, 46);
-            this.GridMeds.MultiSelect = false;
-            this.GridMeds.Name = "GridMeds";
-            this.GridMeds.ReadOnly = true;
-            this.GridMeds.RowHeadersVisible = false;
-            this.GridMeds.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.GridMeds.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridMeds.ShowEditingIcon = false;
-            this.GridMeds.Size = new System.Drawing.Size(775, 257);
-            this.GridMeds.TabIndex = 71;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(16, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(137, 43);
+            this.label11.TabIndex = 69;
+            this.label11.Text = "Vitals";
             // 
             // viewPatient
             // 
@@ -698,18 +699,18 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.viewPatient_Load);
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataAllergies)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDiag)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridMeds)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridpatientsChange)).EndInit();
             this.txtemail.ResumeLayout(false);
             this.txtemail.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataAllergies)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVital)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDiag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridMeds)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -232,7 +232,7 @@ namespace MedicalSoftware
             string sqlquery = "INSERT INTO Vitals(PatientId, Temperature, BloodPresure, Spo2,pain, LevelofAwareness, Notes, Height, Weight) values (?,?,?,?,?,?,?,?,?)";
             SQLiteCommand cmd = conn.CreateCommand();
             cmd.CommandText = sqlquery;
-            cmd.Parameters.AddWithValue("PatientId", txtVitalPain.Text);
+            cmd.Parameters.AddWithValue("PatientId", txtPatientId.Text);
             cmd.Parameters.AddWithValue("Temperature", txtVitaTemp.Text);
             cmd.Parameters.AddWithValue("BloodPresure", txtVitaBP.Text);
             cmd.Parameters.AddWithValue("Spo2", txtVitaSPO.Text);
