@@ -252,7 +252,6 @@ namespace MedicalSoftware
             cmd.Parameters.AddWithValue("LastName", txtLastname.Text);
             cmd.Parameters.AddWithValue("Time", txtTime.Text);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("DEBUG UPLOAD OK RELOADING BELOW");
             conn.Close();
             cmd.Dispose();
             txtLastname.Clear();

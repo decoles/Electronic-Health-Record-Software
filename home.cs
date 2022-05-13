@@ -96,7 +96,7 @@ namespace MedicalSoftware
 
         private void home_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit(); 
+            
         }
     }
 }

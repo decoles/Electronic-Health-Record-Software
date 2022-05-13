@@ -324,5 +324,10 @@ namespace MedicalSoftware
             txtFoodAllergies.Clear();
             txtDrugAllergies.Clear();
         }
+
+        private void txtMedMedication_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
